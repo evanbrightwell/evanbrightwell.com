@@ -1364,6 +1364,7 @@ function setHeroSlide(index, instant = false) {
   const token = (heroTransitionToken += 1);
 
   const updateCopy = () => {
+    if (token !== heroTransitionToken) return;
     heroImage.alt = `${project.title} portfolio preview`;
     heroCode.textContent = project.code;
     heroTitle.textContent = project.type;
@@ -1373,8 +1374,26 @@ function setHeroSlide(index, instant = false) {
     renderDots();
   };
 
+  const transitionCopy = () => {
+    if (!heroImageFrame) {
+      updateCopy();
+      return;
+    }
+
+    heroImageFrame.classList.add("is-copy-fading");
+    window.setTimeout(() => {
+      if (token !== heroTransitionToken) return;
+      updateCopy();
+      window.requestAnimationFrame(() => {
+        if (token !== heroTransitionToken) return;
+        heroImageFrame.classList.remove("is-copy-fading");
+      });
+    }, 170);
+  };
+
   const commitImage = () => {
     if (token !== heroTransitionToken) return;
+    heroImageFrame?.classList.remove("is-copy-fading");
     heroImage.src = nextSrc;
     heroImage.classList.add("is-active");
     standbyHeroImage?.classList.remove("is-active");
@@ -1405,7 +1424,7 @@ function setHeroSlide(index, instant = false) {
     if (!incomingImage.isConnected) {
       heroImageFrame?.append(incomingImage);
     }
-    updateCopy();
+    transitionCopy();
 
     window.requestAnimationFrame(() => {
       if (token !== heroTransitionToken) return;
