@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 236 264" role="img" aria-labelledby="title">
+  <title id="title">Evan Brightwell logo</title>
+  <g fill="#a4d32d">
+    <rect x="94" y="13" width="44" height="51"/>
+    <rect x="14" y="65" width="45" height="43"/>
+    <rect x="68" y="108" width="45" height="44"/>
+    <rect x="14" y="153" width="44" height="48"/>
+    <rect x="94" y="202" width="44" height="49"/>
+    <path d="M175 62h18c14 0 24 10 24 24s-10 24-24 24h-18z"/>
+    <path d="M175 151h20c16 0 27 11 27 27s-11 27-27 27h-20z"/>
+  </g>
+</svg>

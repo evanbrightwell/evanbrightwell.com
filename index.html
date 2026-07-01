@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Evan Brightwell - 3D Design & Visualization</title>
+    <meta
+      name="description"
+      content="Evan Brightwell is a 3D designer working across environments, display systems, product presentation, and visual workflows."
+   >
+    <link rel="icon" href="assets/brand/eb-logo.svg" type="image/svg+xml">
+    <link rel="preload" href="assets/brand/eb-logo.svg" as="image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=prepost-cleanup2">
+  </head>
+  <body>
+    <div class="site-shell">
+      <aside class="identity-rail" aria-label="Identity and contact summary">
+        <div class="rail-top">
+          <a class="brand-mark" href="#top" aria-label="Evan Brightwell home">
+            <img src="assets/brand/eb-logo.svg" alt="">
+          </a>
+        </div>
+
+        <div class="identity-copy">
+          <h1>Evan<br>Brightwell</h1>
+          <p class="role-line">3D Design & Visualization</p>
+          <span class="rail-rule"></span>
+          <p>
+            I work across 3D design, spatial thinking, display systems, and
+            product presentation for branded environments and physical objects.
+          </p>
+        </div>
+
+        <div class="rail-meta">
+          <section>
+            <p class="availability"><span class="status-dot"></span>OPEN TO PROJECTS & ROLES</p>
+          </section>
+          <section>
+            <p class="location-line">
+              <svg class="rail-icon" aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M20 10c0 5-8 11-8 11s-8-6-8-11a8 8 0 1 1 16 0Z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Los Angeles, CA</span>
+            </p>
+            <p class="time-line"><span id="la-time">Pacific Time</span></p>
+          </section>
+        </div>
+
+        <div class="rail-contact" aria-label="Contact links">
+          <a href="mailto:evanbrightwell@me.com" aria-label="Email">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+              <path d="m3 7 9 6 9-6"></path>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/evan-brightwell/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+            <span aria-hidden="true">in</span>
+          </a>
+          <a href="https://www.instagram.com/metajerk/" target="_blank" rel="noreferrer" aria-label="Instagram">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+              <circle cx="12" cy="12" r="4"></circle>
+              <circle cx="17.5" cy="6.5" r="1"></circle>
+            </svg>
+          </a>
+        </div>
+
+        <p class="rail-copyright">© 2026 Evan Brightwell</p>
+      </aside>
+
+      <main id="top" class="workspace">
+        <header class="topbar" aria-label="Portfolio navigation">
+          <div class="filter-group" role="tablist" aria-label="Work category filters">
+            <button class="filter active" type="button" data-category="all" role="tab" aria-selected="true">
+              <span></span>All
+            </button>
+            <button class="filter" type="button" data-category="environments" role="tab" aria-selected="false">
+              Spaces
+            </button>
+            <button class="filter" type="button" data-category="displays" role="tab" aria-selected="false">
+              Displays
+            </button>
+            <button class="filter" type="button" data-category="products" role="tab" aria-selected="false">
+              Products
+            </button>
+            <button class="filter" type="button" data-category="systems" role="tab" aria-selected="false">
+              Process
+            </button>
+          </div>
+          <div class="coordinates" aria-label="Current viewport coordinates">
+            <span>X: <b id="coord-x">23.48</b></span>
+            <span>Y: <b id="coord-y">61.72</b></span>
+            <span>Z: 01.00</span>
+          </div>
+        </header>
+
+        <section class="hero-panel" aria-labelledby="featured-title">
+          <div class="hero-image-wrap">
+            <img id="hero-image" src="work/spaces/don-julio-suite/047BC666-9C3C-484B-A509-2E42B90049C8.png" alt="Featured 3D design portfolio preview">
+            <div class="hero-overlay">
+              <p id="hero-code">HOLLOW POINT / 01</p>
+              <h2 id="featured-title">Environment Design</h2>
+              <p id="hero-meta">Blender</p>
+            </div>
+            <div class="slide-count" aria-hidden="true">
+              <strong id="active-index">01</strong><span id="slide-total">/ 12</span>
+            </div>
+            <div class="hero-dots" id="hero-dots" aria-label="Featured project slides"></div>
+          </div>
+        </section>
+
+        <section id="work" class="base-grid" aria-label="Selected work and navigation">
+          <div class="work-tiles" id="work-tiles"></div>
+          <div class="landing-statement">
+            <div>
+              <p>Selected work</p>
+              <h3>Design beyond the render.</h3>
+            </div>
+            <span>
+              The work spans environments, displays, and products intended for real-world execution.
+              <br><br>
+              Working in 3D makes it possible to test form, scale, layout, and material while the idea is still flexible, before it moves toward production. It gives shape to loose ideas so they can be discussed, adjusted, and made real.
+            </span>
+          </div>
+          <nav class="spatial-nav" aria-label="Spatial site navigation">
+            <div class="plane">
+              <svg class="xyz-grid-svg" viewBox="0 0 1200 760" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+                <g class="xyz-grid-lines" data-grid-lines></g>
+                <line class="xyz-axis xyz-axis-x" x1="60" y1="516" x2="1140" y2="224"></line>
+                <line class="xyz-axis xyz-axis-y" x1="60" y1="224" x2="1140" y2="516"></line>
+                <line class="xyz-axis xyz-axis-z" x1="600" y1="718" x2="600" y2="24"></line>
+                <circle class="xyz-origin" cx="600" cy="370" r="3.5"></circle>
+              </svg>
+              <button class="waypoint wp-systems" type="button" data-target="overview">Work</button>
+              <button class="waypoint wp-bio" type="button" data-target="bio">Bio</button>
+              <button class="waypoint wp-contact" type="button" data-target="contact">Contact</button>
+              <span class="axis axis-x">X</span>
+              <span class="axis axis-y">Y</span>
+              <span class="axis axis-z">Z</span>
+              <span class="axis-value axis-x-min">-10</span>
+              <span class="axis-value axis-x-max">+10</span>
+              <span class="axis-value axis-y-max">+10</span>
+              <span class="axis-value axis-z-max">+10</span>
+              <span class="axis-value axis-z-min">-10</span>
+              <button class="center-node active" type="button" data-target="overview" aria-label="Return to overview"></button>
+            </div>
+          </nav>
+        </section>
+
+        <section id="category" class="site-section category-section" aria-labelledby="category-title">
+          <div class="section-heading">
+            <p class="section-label" id="category-label">Work</p>
+            <h2 id="category-title">Selected work.</h2>
+          </div>
+          <p class="category-intro" id="category-intro"></p>
+          <div class="category-work-grid" id="category-work-grid"></div>
+        </section>
+
+        <section id="gallery" class="site-section gallery-section" aria-labelledby="gallery-title">
+          <div class="section-heading">
+            <p class="section-label" id="gallery-label">Gallery</p>
+            <h2 id="gallery-title">A broader visual pass through spaces, displays, products, and process work.</h2>
+          </div>
+          <p class="gallery-intro" id="gallery-intro">
+            Selected project images from recent spatial, display, product, and process work.
+          </p>
+          <div class="gallery-grid" id="gallery-grid"></div>
+        </section>
+
+        <section id="bio" class="site-section bio-section" aria-labelledby="bio-title">
+          <div class="bio-layout">
+            <figure class="bio-portrait">
+              <img src="assets/profile/evan-brightwell-portrait.png" alt="Portrait of Evan Brightwell">
+            </figure>
+            <div class="bio-copy">
+              <p class="section-label">BIO</p>
+              <h2 id="bio-title">I use 3D to work through physical design problems.</h2>
+              <div class="bio-text">
+                <p>
+                  I’m a 3D designer working across branded environments,
+                  display systems, product presentation, and visual workflows.
+                </p>
+                <p>
+                  The work usually starts with something unresolved: a space that
+                  needs to be understood, an object that needs to be figured out,
+                  or an idea that needs to become clear before it can move
+                  forward. I use 3D to work through layout, scale, structure,
+                  material, presentation, and the practical decisions that shape
+                  the final direction.
+                </p>
+                <p>
+                  Before working independently, I spent years in entertainment
+                  advertising and display design, including creative leadership
+                  roles on theatrical, retail, out-of-home, and experiential
+                  campaigns. That background still informs the work: the idea
+                  needs to have visual impact, but it also needs to be specific
+                  enough to explain, evaluate, and develop.
+                </p>
+              </div>
+              <dl class="bio-facts">
+                <div>
+                  <dt>Focus</dt>
+                  <dd>Branded environments, display systems, product presentation, visual workflows</dd>
+                </div>
+                <div>
+                  <dt>Approach</dt>
+                  <dd>Use 3D to clarify ideas, test decisions, and shape practical design direction</dd>
+                </div>
+                <div>
+                  <dt>Background</dt>
+                  <dd>Entertainment advertising, display design, experiential, and campaign development</dd>
+                </div>
+                <div>
+                  <dt>Tools</dt>
+                  <dd>Blender, Rhino, Adobe tools, and visual workflow development</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="site-section contact-section" aria-labelledby="contact-title">
+          <div class="contact-layout">
+            <div class="contact-intro">
+              <p class="section-label">CONTACT</p>
+              <h2 id="contact-title">Send the loose problem, the strange brief, or the thing you need to figure out.</h2>
+              <p>
+                I’m available for freelance projects, collaborations, and roles
+                involving 3D design, spatial thinking, display systems, and
+                product presentation.
+              </p>
+            </div>
+            <div class="contact-panel">
+              <div class="contact-actions" aria-label="Contact options">
+                <a href="mailto:evanbrightwell@me.com?subject=Project%20inquiry">Email</a>
+                <a href="https://www.linkedin.com/in/evan-brightwell/" target="_blank" rel="noreferrer">LinkedIn</a>
+              </div>
+              <dl class="contact-details">
+                <div>
+                  <dt>Best fit</dt>
+                  <dd>Branded environments, display systems, product presentation, and early-stage design development</dd>
+                </div>
+                <div>
+                  <dt>Status</dt>
+                  <dd>Available for freelance, consulting, and select full-time opportunities</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+    <div class="project-modal" id="project-modal" hidden role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+      <div class="project-modal-panel">
+        <button class="project-modal-close" id="project-modal-close" type="button" aria-label="Close project preview">×</button>
+        <div class="project-modal-media">
+          <img id="project-modal-image" alt="">
+        </div>
+        <div class="project-modal-copy">
+          <p id="project-modal-code"></p>
+          <h2 id="project-modal-title"></h2>
+          <span id="project-modal-type"></span>
+          <dl>
+            <div>
+              <dt>Purpose</dt>
+              <dd id="project-modal-purpose"></dd>
+            </div>
+            <div>
+              <dt>Tools</dt>
+              <dd id="project-modal-tools"></dd>
+            </div>
+            <div>
+              <dt>Role</dt>
+              <dd id="project-modal-role"></dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js?v=prepost-cleanup2"></script>
+  </body>
+</html>
