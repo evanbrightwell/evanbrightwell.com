@@ -372,6 +372,11 @@ a {
   transition: opacity 180ms ease, transform 600ms ease;
 }
 
+.hero-image-wrap img.hero-image-incoming {
+  z-index: 1;
+  opacity: 0;
+}
+
 .hero-image-wrap:hover img {
   transform: scale(1.015);
 }

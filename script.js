@@ -952,6 +952,7 @@ let activeCategory = "all";
 let activeSlide = 0;
 let carouselTimer;
 let projectImageTimer;
+let heroTransitionToken = 0;
 let restoringRoute = false;
 let routeAnimationTimer;
 const activeProjectByCategory = {
@@ -1347,26 +1348,75 @@ function setHeroSlide(index, instant = false) {
 
   activeSlide = (index + slides.length) % slides.length;
   const project = slides[activeSlide];
+  const nextSrc = project.image;
+  const token = (heroTransitionToken += 1);
 
-  const update = () => {
-    heroImage.src = project.image;
+  const updateCopy = () => {
     heroImage.alt = `${project.title} portfolio preview`;
     heroCode.textContent = project.code;
     heroTitle.textContent = project.type;
     heroMeta.textContent = project.tools;
     activeIndex.textContent = formatNumber(activeSlide + 1);
     slideTotal.textContent = `/ ${formatNumber(slides.length)}`;
-    heroImage.style.opacity = "1";
     renderDots();
   };
 
+  const commitImage = () => {
+    if (token !== heroTransitionToken) return;
+    heroImage.src = nextSrc;
+    heroImage.style.opacity = "1";
+    updateCopy();
+  };
+
   if (instant) {
-    update();
+    commitImage();
     return;
   }
 
-  heroImage.style.opacity = "0";
-  window.setTimeout(update, 140);
+  if (heroImage.currentSrc.endsWith(nextSrc) || heroImage.getAttribute("src") === nextSrc) {
+    updateCopy();
+    return;
+  }
+
+  const incomingImage = new Image();
+  incomingImage.src = nextSrc;
+  incomingImage.alt = `${project.title} portfolio preview`;
+  incomingImage.className = "hero-image-incoming";
+
+  const crossfade = () => {
+    if (token !== heroTransitionToken) return;
+
+    const previousIncoming = heroImage.parentElement?.querySelector(".hero-image-incoming");
+    previousIncoming?.remove();
+    heroImage.parentElement?.append(incomingImage);
+    incomingImage.getBoundingClientRect();
+    updateCopy();
+
+    window.requestAnimationFrame(() => {
+      if (token !== heroTransitionToken) return;
+      incomingImage.style.opacity = "1";
+      heroImage.style.opacity = "0";
+    });
+
+    window.setTimeout(() => {
+      if (token !== heroTransitionToken) return;
+      heroImage.src = nextSrc;
+      heroImage.style.opacity = "1";
+      incomingImage.remove();
+    }, 240);
+  };
+
+  const loadAndCrossfade = () => {
+    const decode = incomingImage.decode ? incomingImage.decode() : Promise.resolve();
+    decode.then(crossfade).catch(crossfade);
+  };
+
+  if (incomingImage.complete) {
+    loadAndCrossfade();
+  } else {
+    incomingImage.addEventListener("load", loadAndCrossfade, { once: true });
+    incomingImage.addEventListener("error", commitImage, { once: true });
+  }
 }
 
 function syncCategoryControls() {
