@@ -1022,17 +1022,6 @@ body[data-route="systems"] .project-selector-card {
   opacity: 0.72;
 }
 
-.lead-proof-media::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.46), transparent 38%),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.4), transparent 54%);
-  pointer-events: none;
-}
-
 .lead-proof-media img,
 .lead-proof-media video {
   position: absolute;
@@ -1056,35 +1045,6 @@ body[data-route="systems"] .project-selector-card {
 
 .lead-image-layer.is-active {
   opacity: 1;
-}
-
-.lead-media-overlay {
-  position: absolute;
-  top: 28px;
-  left: 34px;
-  z-index: 3;
-  max-width: min(320px, 72%);
-  color: #f8f8f2;
-  pointer-events: none;
-}
-
-.lead-media-overlay p {
-  margin: 0 0 6px;
-  color: rgba(248, 248, 242, 0.96);
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  line-height: 1.35;
-  text-transform: uppercase;
-}
-
-.lead-media-overlay span,
-.lead-media-overlay em {
-  display: block;
-  color: rgba(248, 248, 242, 0.9);
-  font-size: 13px;
-  font-style: normal;
-  line-height: 1.45;
 }
 
 .lead-image-dots {

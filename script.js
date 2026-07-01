@@ -1218,11 +1218,6 @@ function renderCategorySection(categoryId) {
         <article class="lead-proof" data-lane="${leadProject.lane || ""}">
           <div class="lead-proof-media" data-lead-project-id="${leadProject.id}">
             ${renderLeadImageLayers(leadProject, leadImage, `${leadProject.title} project media`)}
-            <div class="lead-media-overlay">
-              <p>${leadProject.code}</p>
-              <span>${leadProject.type}</span>
-              <em>${leadProject.tools}</em>
-            </div>
             ${
               leadImages.length > 1
                 ? `<div class="lead-image-dots" aria-label="${leadProject.title} images">
