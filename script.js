@@ -913,7 +913,7 @@ const workItems = [
 ];
 
 const tiles = document.querySelector("#work-tiles");
-const heroImage = document.querySelector("#hero-image");
+let heroImage = document.querySelector("#hero-image");
 const heroCode = document.querySelector("#hero-code");
 const heroTitle = document.querySelector("#featured-title");
 const heroMeta = document.querySelector("#hero-meta");
@@ -1363,6 +1363,7 @@ function setHeroSlide(index, instant = false) {
 
   const commitImage = () => {
     if (token !== heroTransitionToken) return;
+    heroImage.parentElement?.querySelector(".hero-image-incoming")?.remove();
     heroImage.src = nextSrc;
     heroImage.style.opacity = "1";
     updateCopy();
@@ -1386,6 +1387,7 @@ function setHeroSlide(index, instant = false) {
   const crossfade = () => {
     if (token !== heroTransitionToken) return;
 
+    const outgoingImage = heroImage;
     const previousIncoming = heroImage.parentElement?.querySelector(".hero-image-incoming");
     previousIncoming?.remove();
     heroImage.parentElement?.append(incomingImage);
@@ -1400,9 +1402,12 @@ function setHeroSlide(index, instant = false) {
 
     window.setTimeout(() => {
       if (token !== heroTransitionToken) return;
-      heroImage.src = nextSrc;
-      heroImage.style.opacity = "1";
-      incomingImage.remove();
+      outgoingImage.removeAttribute("id");
+      incomingImage.id = "hero-image";
+      incomingImage.classList.remove("hero-image-incoming");
+      incomingImage.style.opacity = "1";
+      outgoingImage.remove();
+      heroImage = incomingImage;
     }, 240);
   };
 
