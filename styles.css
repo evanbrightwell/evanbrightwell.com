@@ -858,6 +858,15 @@ body[data-route="systems"] .project-selector-card {
   background: transparent;
 }
 
+.project-selector-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(180deg, transparent 36%, rgba(0, 0, 0, 0.78));
+  pointer-events: none;
+}
+
 .project-selector-card img {
   position: absolute;
   inset: 0;
@@ -868,26 +877,27 @@ body[data-route="systems"] .project-selector-card {
   transition: transform 420ms ease, filter 180ms ease;
 }
 
-.project-selector-card > span {
+.project-selector-card-content {
   position: absolute;
   left: 10px;
-  top: 10px;
+  right: 10px;
+  bottom: 10px;
   z-index: 3;
+  display: block;
+}
+
+.project-selector-card-number {
+  display: block;
+  margin-bottom: 5px;
   color: var(--green);
-  font-size: 10px;
-  font-weight: 700;
+  font-size: 12px;
+  font-weight: 600;
   line-height: 1;
 }
 
 .project-selector-card strong {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 3;
   display: block;
-  padding: 24px 10px 10px;
-  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.72));
+  margin: 0;
   color: #fff;
   font-size: 12px;
   font-weight: 800;
