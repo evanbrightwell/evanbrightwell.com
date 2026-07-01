@@ -1039,7 +1039,7 @@ function syncSoftFitImage(frame, image, classTarget, propertyName) {
 
 function syncLeadImageFit() {
   const media = categoryGrid?.querySelector(".lead-proof-media");
-  const image = media?.querySelector(".lead-image");
+  const image = media?.querySelector(".lead-image.is-active") || media?.querySelector(".lead-image");
   syncSoftFitImage(media, image, media, "--lead-soft-bg");
 }
 
@@ -1065,9 +1065,15 @@ function restartProjectImageRotation() {
     }
 
     const currentIndex = activeProjectImageById[projectId] || 0;
-    activeProjectImageById[projectId] = (currentIndex + 1) % images.length;
-    renderCategorySection(activeCategory);
+    setLeadProjectImage(projectId, (currentIndex + 1) % images.length);
   }, 4200);
+}
+
+function renderLeadImageLayers(project, activeImage, altText) {
+  return `
+    <img class="lead-image lead-image-layer is-active" src="${activeImage}" alt="${altText}">
+    <img class="lead-image lead-image-layer" src="${activeImage}" alt="" aria-hidden="true">
+  `;
 }
 
 function renderWorkArea() {
@@ -1210,10 +1216,13 @@ function renderCategorySection(categoryId) {
     categoryGrid.innerHTML = `
       <div class="spaces-work-layout">
         <article class="lead-proof" data-lane="${leadProject.lane || ""}">
-          <div class="lead-proof-media">
-            ${renderProjectMedia(leadProject, leadImage, "lead-image", `${leadProject.title} project media`, {
-              autoplay: true
-            })}
+          <div class="lead-proof-media" data-lead-project-id="${leadProject.id}">
+            ${renderLeadImageLayers(leadProject, leadImage, `${leadProject.title} project media`)}
+            <div class="lead-media-overlay">
+              <p>${leadProject.code}</p>
+              <span>${leadProject.type}</span>
+              <em>${leadProject.tools}</em>
+            </div>
             ${
               leadImages.length > 1
                 ? `<div class="lead-image-dots" aria-label="${leadProject.title} images">
@@ -1304,6 +1313,74 @@ function renderCategorySection(categoryId) {
     </div>
   `;
   restartProjectImageRotation();
+}
+
+function updateLeadImageDots(media, activeIndex) {
+  media?.querySelectorAll("[data-project-image-index]").forEach((button) => {
+    button.classList.toggle("active", Number(button.dataset.projectImageIndex) === activeIndex);
+  });
+}
+
+function setLeadProjectImage(projectId, imageIndex, instant = false) {
+  const project = findProject(projectId);
+  const media = categoryGrid?.querySelector(`.lead-proof-media[data-lead-project-id="${projectId}"]`);
+  if (!project || !media) {
+    renderCategorySection(activeCategory);
+    return;
+  }
+
+  const images = getProjectImages(project);
+  if (!images.length) return;
+
+  const nextIndex = (imageIndex + images.length) % images.length;
+  const nextSrc = images[nextIndex];
+  activeProjectImageById[projectId] = nextIndex;
+  updateLeadImageDots(media, nextIndex);
+
+  const activeLayer = media.querySelector(".lead-image-layer.is-active");
+  const standbyLayer = [...media.querySelectorAll(".lead-image-layer")].find((image) => image !== activeLayer);
+  if (!activeLayer || !standbyLayer) {
+    renderCategorySection(activeCategory);
+    return;
+  }
+
+  if (activeLayer.getAttribute("src") === nextSrc) {
+    syncLeadImageFit();
+    return;
+  }
+
+  const finish = () => {
+    standbyLayer.alt = `${project.title} project media`;
+    standbyLayer.removeAttribute("aria-hidden");
+
+    if (instant) {
+      standbyLayer.classList.add("is-active");
+      activeLayer.classList.remove("is-active");
+      activeLayer.alt = "";
+      activeLayer.setAttribute("aria-hidden", "true");
+      syncLeadImageFit();
+      return;
+    }
+
+    window.requestAnimationFrame(() => {
+      standbyLayer.classList.add("is-active");
+      activeLayer.classList.remove("is-active");
+    });
+
+    window.setTimeout(() => {
+      activeLayer.alt = "";
+      activeLayer.setAttribute("aria-hidden", "true");
+      syncLeadImageFit();
+    }, 260);
+  };
+
+  standbyLayer.src = nextSrc;
+
+  if (standbyLayer.complete) {
+    finish();
+  } else {
+    standbyLayer.addEventListener("load", finish, { once: true });
+  }
 }
 
 function findProject(projectId) {
@@ -1727,8 +1804,7 @@ categoryGrid?.addEventListener("click", (event) => {
   const imageDot = event.target.closest("[data-project-image-index]");
   if (imageDot && activeCategory !== "all") {
     const projectId = activeProjectByCategory[activeCategory];
-    activeProjectImageById[projectId] = Number(imageDot.dataset.projectImageIndex);
-    renderCategorySection(activeCategory);
+    setLeadProjectImage(projectId, Number(imageDot.dataset.projectImageIndex));
     restartProjectImageRotation();
     return;
   }
