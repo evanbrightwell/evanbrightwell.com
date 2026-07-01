@@ -868,6 +868,23 @@ body[data-route="systems"] .project-selector-card {
   transition: transform 420ms ease, filter 180ms ease;
 }
 
+.project-selector-card strong {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  display: block;
+  padding: 24px 10px 10px;
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.72));
+  color: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
 .project-selector-card strong .card-title-line,
 .category-project-card h3 .card-title-line,
 .lead-proof-copy h3 .card-title-line {
