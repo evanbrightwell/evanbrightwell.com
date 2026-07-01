@@ -914,6 +914,7 @@ const workItems = [
 
 const tiles = document.querySelector("#work-tiles");
 let heroImage = document.querySelector("#hero-image");
+const heroImageFrame = document.querySelector(".hero-image-wrap");
 const heroCode = document.querySelector("#hero-code");
 const heroTitle = document.querySelector("#featured-title");
 const heroMeta = document.querySelector("#hero-meta");
@@ -953,6 +954,7 @@ let activeSlide = 0;
 let carouselTimer;
 let projectImageTimer;
 let heroTransitionToken = 0;
+let standbyHeroImage;
 let restoringRoute = false;
 let routeAnimationTimer;
 const activeProjectByCategory = {
@@ -978,6 +980,16 @@ const categoryIds = categories.map((category) => category.id);
 const routeTargets = new Set(["top", "overview", "work", "gallery", "bio", "contact", ...categoryIds]);
 const sectionRouteIds = new Set(["gallery", "bio", "contact", ...categoryIds]);
 const siteWaypointTargets = new Set(["bio", "contact"]);
+
+if (heroImage && heroImageFrame) {
+  heroImage.classList.add("hero-image-layer", "is-active");
+  standbyHeroImage = heroImage.cloneNode(false);
+  standbyHeroImage.removeAttribute("id");
+  standbyHeroImage.alt = "";
+  standbyHeroImage.setAttribute("aria-hidden", "true");
+  standbyHeroImage.className = "hero-image-layer";
+  heroImage.after(standbyHeroImage);
+}
 
 function getVisibleProjects() {
   if (activeCategory === "all") return workItems.filter((project) => project.featured);
@@ -1363,9 +1375,9 @@ function setHeroSlide(index, instant = false) {
 
   const commitImage = () => {
     if (token !== heroTransitionToken) return;
-    heroImage.parentElement?.querySelector(".hero-image-incoming")?.remove();
     heroImage.src = nextSrc;
-    heroImage.style.opacity = "1";
+    heroImage.classList.add("is-active");
+    standbyHeroImage?.classList.remove("is-active");
     updateCopy();
   };
 
@@ -1379,35 +1391,36 @@ function setHeroSlide(index, instant = false) {
     return;
   }
 
-  const incomingImage = new Image();
+  const incomingImage = standbyHeroImage || new Image();
   incomingImage.src = nextSrc;
   incomingImage.alt = `${project.title} portfolio preview`;
-  incomingImage.className = "hero-image-incoming";
+  incomingImage.removeAttribute("id");
+  incomingImage.removeAttribute("aria-hidden");
+  incomingImage.className = "hero-image-layer";
 
   const crossfade = () => {
     if (token !== heroTransitionToken) return;
 
     const outgoingImage = heroImage;
-    const previousIncoming = heroImage.parentElement?.querySelector(".hero-image-incoming");
-    previousIncoming?.remove();
-    heroImage.parentElement?.append(incomingImage);
-    incomingImage.getBoundingClientRect();
+    if (!incomingImage.isConnected) {
+      heroImageFrame?.append(incomingImage);
+    }
     updateCopy();
 
     window.requestAnimationFrame(() => {
       if (token !== heroTransitionToken) return;
-      incomingImage.style.opacity = "1";
-      heroImage.style.opacity = "0";
+      incomingImage.classList.add("is-active");
+      outgoingImage.classList.remove("is-active");
     });
 
     window.setTimeout(() => {
       if (token !== heroTransitionToken) return;
       outgoingImage.removeAttribute("id");
+      outgoingImage.alt = "";
+      outgoingImage.setAttribute("aria-hidden", "true");
       incomingImage.id = "hero-image";
-      incomingImage.classList.remove("hero-image-incoming");
-      incomingImage.style.opacity = "1";
-      outgoingImage.remove();
       heroImage = incomingImage;
+      standbyHeroImage = outgoingImage;
     }, 240);
   };
 
