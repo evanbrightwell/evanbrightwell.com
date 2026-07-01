@@ -868,6 +868,17 @@ body[data-route="systems"] .project-selector-card {
   transition: transform 420ms ease, filter 180ms ease;
 }
 
+.project-selector-card > span {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 3;
+  color: var(--green);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+}
+
 .project-selector-card strong {
   position: absolute;
   left: 0;
