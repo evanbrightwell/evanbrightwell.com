@@ -1260,10 +1260,8 @@ function renderCategorySection(categoryId) {
           ${categoryProjects
             .map((project, index) => {
               return `
-                <button class="project-selector-card ${project.id === leadProject.id ? "active" : ""}" type="button" data-project-select="${project.id}" data-lane="${project.lane || ""}">
+                <button class="project-selector-card ${project.id === leadProject.id ? "active" : ""}" type="button" data-project-select="${project.id}" data-lane="${project.lane || ""}" aria-label="Select ${project.title}">
 	                  <img src="${project.image}" alt="${project.title} project image">
-	                  <span>${formatNumber(index + 1)}</span>
-	                  <strong>${renderCardTitle(project)}</strong>
 	                </button>
               `;
             })
