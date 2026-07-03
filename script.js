@@ -241,6 +241,45 @@ function renderLeadTitle(project) {
   return lines.map((line) => `<span class="card-title-line">${line}</span>`).join("");
 }
 
+function getTitleLines(project) {
+  return project.leadTitle || project.cardTitle || [project.title];
+}
+
+function getLeadCopyFitClass(project) {
+  const lines = getTitleLines(project);
+  const longestTitleLine = Math.max(...lines.map((line) => line.length));
+  const titleLength = lines.join(" ").length;
+  const bodyLength = [project.purpose, project.role, project.tools, project.type]
+    .join(" ")
+    .length;
+
+  if (longestTitleLine >= 18 || titleLength >= 34 || bodyLength >= 245) {
+    return "is-copy-extra-dense";
+  }
+
+  if (longestTitleLine >= 15 || titleLength >= 28 || bodyLength >= 210) {
+    return "is-copy-dense";
+  }
+
+  return "";
+}
+
+function getSelectorCardFitClass(project) {
+  const lines = project.cardTitle || [project.title];
+  const longestLine = Math.max(...lines.map((line) => line.length));
+  const totalLength = lines.join(" ").length;
+
+  if (longestLine >= 16 || totalLength >= 32 || lines.length > 3) {
+    return "is-title-extra-dense";
+  }
+
+  if (longestLine >= 13 || totalLength >= 25) {
+    return "is-title-dense";
+  }
+
+  return "";
+}
+
 function renderDots() {
   const slides = getVisibleProjects();
   heroDots.innerHTML = slides
@@ -351,7 +390,7 @@ function renderCategorySection(categoryId) {
                 : ""
             }
           </div>
-          <div class="lead-proof-copy">
+          <div class="lead-proof-copy ${getLeadCopyFitClass(leadProject)}">
             <p>Featured ${featuredLabel} / ${leadProject.code}</p>
             <h3>${renderLeadTitle(leadProject)}</h3>
             <span>${leadProject.type}</span>
@@ -377,7 +416,7 @@ function renderCategorySection(categoryId) {
           ${categoryProjects
             .map((project, index) => {
               return `
-                <button class="project-selector-card ${project.id === leadProject.id ? "active" : ""}" type="button" data-project-select="${project.id}" data-lane="${project.lane || ""}" aria-label="Select ${project.title}">
+                <button class="project-selector-card ${project.id === leadProject.id ? "active" : ""} ${getSelectorCardFitClass(project)}" type="button" data-project-select="${project.id}" data-lane="${project.lane || ""}" aria-label="Select ${project.title}">
 	                  <img src="${project.image}" alt="${project.title} project image">
 	                  <span class="project-selector-card-content">
 	                    <span class="project-selector-card-number">${formatNumber(index + 1)}</span>
