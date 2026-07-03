@@ -984,7 +984,7 @@
     {
       "id": "theatrical-display-production-system",
       "category": "systems",
-      "title": "Theatrical Display Production System",
+      "title": "Display Production System",
       "code": "THEATRICAL PIPELINE / 25",
       "lane": "Pipelines",
       "type": "3D-to-Fabrication Workflow",
