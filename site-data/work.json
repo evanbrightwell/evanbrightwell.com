@@ -1003,7 +1003,7 @@
     {
       "id": "procedural-magnetic-box-system",
       "category": "systems",
-      "title": "Procedural Magnetic Box System",
+      "title": "Procedural Box System",
       "code": "MAGNETIC BOX / 26",
       "lane": "Procedural",
       "type": "Geometry Nodes Packaging System",
