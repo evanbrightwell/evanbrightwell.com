@@ -1638,6 +1638,13 @@ function markWaypoint(target) {
   mobileBioLink?.classList.toggle("active", routeTarget === "bio");
   mobileBioLink?.setAttribute("aria-selected", routeTarget === "bio" ? "true" : "false");
   mobileBioLink?.setAttribute("aria-current", routeTarget === "bio" ? "page" : "false");
+
+  if (siteWaypointTargets.has(routeTarget)) {
+    filters.forEach((filter) => {
+      filter.classList.remove("active");
+      filter.setAttribute("aria-selected", "false");
+    });
+  }
 }
 
 function playRouteIntro(target) {
