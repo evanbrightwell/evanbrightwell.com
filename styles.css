@@ -581,16 +581,41 @@ body[data-route="systems"],
 body[data-route="bio"],
 body[data-route="contact"] {
   --spatial-nav-width: min(300px, 24vw);
-  --spatial-plane-height: 176px;
+  --spatial-plane-height: 168px;
 }
 
 body[data-route="environments"],
 body[data-route="overview"],
 body[data-route="displays"],
 body[data-route="products"],
-body[data-route="systems"] {
+body[data-route="systems"],
+body[data-route="bio"],
+body[data-route="contact"] {
   --spatial-nav-right: clamp(28px, 3.8vw, 58px);
   --spatial-nav-bottom: clamp(82px, 8.5vw, 116px);
+}
+
+body[data-route="overview"] #work {
+  align-items: stretch;
+}
+
+body[data-route="overview"] .spatial-nav {
+  position: relative;
+  grid-column: 2;
+  grid-row: 1;
+  right: auto;
+  bottom: auto;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  min-height: var(--spatial-plane-height);
+  align-self: stretch;
+  padding: 0 0 4px;
+  transform: translateX(5px);
+}
+
+body[data-route="overview"] .plane {
+  min-height: var(--spatial-plane-height);
 }
 
 body[data-route="gallery"] .site-section,
@@ -2087,8 +2112,7 @@ body[data-route="contact"] #work .landing-statement {
   transform-style: preserve-3d;
   transition: transform 180ms ease-out;
   will-change: transform;
-  background:
-    radial-gradient(ellipse at 50% 56%, rgba(255, 255, 255, 0.96) 0%, rgba(245, 244, 240, 0.92) 42%, rgba(245, 244, 240, 0) 74%);
+  background: transparent;
 }
 
 .xyz-grid-svg {
