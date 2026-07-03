@@ -286,7 +286,8 @@ a {
   gap: 12px;
 }
 
-.filter {
+.filter,
+.mobile-bio-link {
   display: inline-flex;
   align-items: center;
   gap: 9px;
@@ -304,16 +305,23 @@ a {
   text-transform: uppercase;
 }
 
-.filter:hover {
+.mobile-bio-link {
+  display: none;
+}
+
+.filter:hover,
+.mobile-bio-link:hover {
   border-color: var(--line);
 }
 
-.filter.active {
+.filter.active,
+.mobile-bio-link.active {
   background: var(--ink);
   color: #f7f7f1;
 }
 
-.filter span {
+.filter span,
+.mobile-bio-link span {
   display: none;
   width: 8px;
   height: 8px;
@@ -323,7 +331,8 @@ a {
   box-shadow: 0 0 18px rgba(164, 211, 45, 0.6);
 }
 
-.filter.active span {
+.filter.active span,
+.mobile-bio-link.active span {
   display: inline-block;
 }
 
@@ -2616,13 +2625,23 @@ body[data-route="contact"] #work .landing-statement {
     padding: 20px;
   }
 
+  .rail-top {
+    position: absolute;
+    top: 44px;
+    right: 20px;
+    z-index: 2;
+    width: 92px;
+    height: 92px;
+    justify-content: center;
+  }
+
   .brand-mark {
-    width: 82px;
-    height: 82px;
+    width: 92px;
+    height: 92px;
   }
 
   .brand-mark img {
-    width: 62px;
+    width: 70px;
   }
 
   .identity-copy h1 {
@@ -2635,7 +2654,7 @@ body[data-route="contact"] #work .landing-statement {
 
   .filter-group {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     width: calc(100vw - 36px);
     max-width: calc(100vw - 36px);
     gap: 6px;
@@ -2649,12 +2668,17 @@ body[data-route="contact"] #work .landing-statement {
     overflow: visible;
   }
 
-  .filter {
+  .mobile-bio-link {
+    display: inline-flex;
+  }
+
+  .filter,
+  .mobile-bio-link {
     justify-content: center;
     min-width: 0;
-    min-height: 36px;
-    padding: 0 5px;
-    font-size: 11.5px;
+    min-height: 34px;
+    padding: 0 4px;
+    font-size: 10.8px;
   }
 
   .hero-image-wrap {

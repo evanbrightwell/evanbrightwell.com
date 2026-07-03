@@ -940,6 +940,7 @@ const projectModalTools = document.querySelector("#project-modal-tools");
 const projectModalRole = document.querySelector("#project-modal-role");
 const projectModalClose = document.querySelector("#project-modal-close");
 const filters = [...document.querySelectorAll(".filter")];
+const mobileBioLink = document.querySelector(".mobile-bio-link");
 const waypoints = [...document.querySelectorAll(".waypoint")];
 const spatialNav = document.querySelector(".spatial-nav");
 const plane = document.querySelector(".plane");
@@ -1634,6 +1635,9 @@ function markWaypoint(target) {
   waypoints.forEach((waypoint) => {
     waypoint.classList.toggle("active", waypoint.dataset.target === activeTarget);
   });
+  mobileBioLink?.classList.toggle("active", routeTarget === "bio");
+  mobileBioLink?.setAttribute("aria-selected", routeTarget === "bio" ? "true" : "false");
+  mobileBioLink?.setAttribute("aria-current", routeTarget === "bio" ? "page" : "false");
 }
 
 function playRouteIntro(target) {
@@ -1769,6 +1773,10 @@ filters.forEach((filter) => {
     }
     setWaypoint(filter.dataset.category);
   });
+});
+
+mobileBioLink?.addEventListener("click", () => {
+  setWaypoint("bio");
 });
 
 heroDots.addEventListener("click", (event) => {
