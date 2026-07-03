@@ -1,0 +1,1065 @@
+{
+  "categories": [
+    {
+      "id": "environments",
+      "title": "Spaces",
+      "subtitle": "Rooms, lounges, activations",
+      "image": "work/spaces/don-julio-suite/84088131-44CB-471A-ACA0-6AE726D2DC47.png",
+      "label": "Spaces work",
+      "headline": "From idea to environment.",
+      "intro": "Before a room, lounge, bar, dinner, or activation exists in the real world, 3D helps define how it should feel and function. These projects clarify atmosphere, layout, scale, material, and brand presence early enough to guide decisions.",
+      "lanes": [
+        "Hospitality",
+        "Activations",
+        "Bars",
+        "Dining"
+      ]
+    },
+    {
+      "id": "displays",
+      "title": "Displays",
+      "subtitle": "Glorifiers, fixtures, retail tools",
+      "image": "work/display-systems/don-julio-margarita-cart/9257F97C-FE50-4517-9604-7998E22DA4A9.png",
+      "label": "Display work",
+      "headline": "Displays that work before they are built.",
+      "intro": "A display has to do more than look good. Working in 3D makes it possible to test product fit, proportion, material, sightlines, and service details before the object moves into production. It gives the team a clear way to judge how the piece will hold product, support service, and read in the real world.",
+      "lanes": [
+        "Glorifiers",
+        "Bar Tools",
+        "Fixtures",
+        "Tabletop"
+      ]
+    },
+    {
+      "id": "products",
+      "title": "Products",
+      "subtitle": "Kits, packaging, product presentation",
+      "image": "work/product-packaging/ciroc-rtd-launch/02-launch-kit-components.png",
+      "label": "Product work",
+      "headline": "Packaging and product systems.",
+      "intro": "3D helps test structure, proportion, material, and presentation before a product system moves toward production. These projects include gifting kits, launch assets, packaging concepts, and product-led moments designed to feel considered from every angle.",
+      "lanes": [
+        "Gifting",
+        "Packaging",
+        "Launch",
+        "Serveware"
+      ]
+    },
+    {
+      "id": "systems",
+      "title": "Process",
+      "subtitle": "Pipelines, tools, motion",
+      "image": "work/process-systems/theatrical-display-production-system/01-bumblebee-poster.jpg",
+      "label": "Process work",
+      "headline": "How the work gets made.",
+      "intro": "This section is about the problem-solving behind the final work. Some projects needed a repeatable tool, some needed a cleaner handoff into fabrication, and some were studies in motion, reconstruction, or controlled variation.\n\nThe point is to make the work easier to test, adjust, repeat, and pass along.",
+      "lanes": [
+        "Pipelines",
+        "Procedural",
+        "Motion",
+        "Reconstruction"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "don-julio-suite",
+      "category": "environments",
+      "title": "Don Julio World Cup Suite",
+      "cardTitle": [
+        "Don Julio",
+        "World Cup Suite"
+      ],
+      "code": "WORLD CUP SUITE / 01",
+      "lane": "Hospitality",
+      "type": "Hospitality Environment",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/spaces/don-julio-suite/84088131-44CB-471A-ACA0-6AE726D2DC47.png",
+      "purpose": "A branded stadium suite concept combining lounge seating, bar service, product display, and guest-facing details for a premium match-day experience.",
+      "role": "Spatial Design, Design Development, 3D Visualization"
+    },
+    {
+      "id": "diageo-private-lounge",
+      "category": "environments",
+      "title": "Diageo Champions Club",
+      "cardTitle": [
+        "Diageo",
+        "Champions Club"
+      ],
+      "code": "CHAMPIONS CLUB / 02",
+      "lane": "Hospitality",
+      "type": "Premium Stadium Lounge",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/spaces/diageo-private-lounge/01-lounge-wide.png",
+      "purpose": "A premium hospitality lounge concept combining bar service, seated social areas, presentation zones, and branded moments within a stadium setting.",
+      "role": "Spatial Design, Design Development, 3D Visualization"
+    },
+    {
+      "id": "alma-miel-dinner-series",
+      "category": "environments",
+      "title": "Alma Miel Dinner Series",
+      "cardTitle": [
+        "Alma Miel",
+        "Dinner Series"
+      ],
+      "code": "ALMA MIEL / 03",
+      "lane": "Dining",
+      "type": "Branded Dinner Experience",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/spaces/alma-miel-dinner-series/03-branded-dining-room.png",
+      "purpose": "A dinner-series concept developed for multiple city settings, using warm lighting, layered tablescapes, product presentation, and flexible dining layouts.",
+      "role": "Spatial Design, Design Development, 3D Visualization"
+    },
+    {
+      "id": "don-julio-margarita-world",
+      "category": "environments",
+      "title": "Don Julio Margarita World",
+      "cardTitle": [
+        "Margarita World"
+      ],
+      "leadTitle": [
+        "Don Julio",
+        "Margarita World"
+      ],
+      "code": "MARGARITA WORLD / 05",
+      "lane": "Activations",
+      "type": "Outdoor Activation Concept",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/spaces/don-julio-margarita-world/01-margarita-world-hero.png",
+      "purpose": "Concept design and spatial guidance for an outdoor brand environment, including architectural facades, social areas, and guest flow.",
+      "role": "Concept Design, Spatial Design, 3D Visualization"
+    },
+    {
+      "id": "don-julio-paloma",
+      "category": "environments",
+      "title": "Doña Paloma Activation",
+      "cardTitle": [
+        "Doña Paloma",
+        "Activation"
+      ],
+      "code": "DOÑA PALOMA / 06",
+      "lane": "Activations",
+      "type": "Outdoor Brand Environment",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/spaces/don-julio-paloma/05-paloma-world-hero.png",
+      "purpose": "A color-forward activation concept developed around scenic entry moments, lounge cues, product presentation, and guest-facing spatial guidance.",
+      "role": "Concept Design, Scenic Development, 3D Visualization"
+    },
+    {
+      "id": "gray-malin-four-seasons-don-julio",
+      "category": "environments",
+      "title": "Gray Malin X Four Seasons",
+      "cardTitle": [
+        "Gray Malin",
+        "X Four Seasons"
+      ],
+      "code": "RESORT PROGRAM / 07",
+      "lane": "Hospitality",
+      "type": "Resort Hospitality Program",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/spaces/gray-malin-x-four-seasons-x-don-julio-program/6EE78ADB-783A-4400-BA41-78484BF587EC.png",
+      "purpose": "Poolside and beachside hospitality concepts built around service objects, branded moments, and relaxed resort pacing.",
+      "role": "Spatial Development, Staging, 3D Visualization"
+    },
+    {
+      "id": "don-julio-super-bowl",
+      "category": "environments",
+      "title": "Don Julio Super Bowl",
+      "cardTitle": [
+        "Don Julio",
+        "Super Bowl"
+      ],
+      "code": "SUPER BOWL LX / 08",
+      "lane": "Events",
+      "type": "Branded Event Environment",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/spaces/don-julio-super-bowl-lx-party/03-rocket-stage-wall.png",
+      "purpose": "A large-scale event concept shaped through branded staging, lounge areas, performance moments, and hospitality presentation.",
+      "role": "Spatial Design, Presentation Development, 3D Visualization"
+    },
+    {
+      "id": "bars-combined",
+      "category": "environments",
+      "title": "Custom Bar Concepts",
+      "cardTitle": [
+        "Custom Bar",
+        "Concepts"
+      ],
+      "code": "BARS / 09",
+      "lane": "Bars",
+      "type": "Custom Bar Concepts",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/spaces/bars-combined/C3EE35E7-AB98-4A07-9569-8E0F149D0B60.png",
+      "purpose": "Bar, backbar, service, and fixture concepts designed for branded hospitality environments, events, and built spatial moments.",
+      "role": "Bar Design, Fixture Development, 3D Visualization"
+    },
+    {
+      "id": "johnnie-walker-ot-assets",
+      "category": "objects",
+      "title": "Johnnie Walker Bar Assets",
+      "cardTitle": [
+        "Johnnie Walker",
+        "Bar Assets"
+      ],
+      "code": "JW TOOL KIT / 17",
+      "lane": "Glorifiers",
+      "type": "On-Trade Display Kit",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/display-systems/johnnie-walker-ot-assets/460E49BD-435C-41B8-B096-AEA5D0BBFF43.png",
+      "purpose": "A set of account-ready display pieces developed around product presence, light, cocktail service, and branded bar details.",
+      "role": "Display Design, Presentation Development, 3D Visualization"
+    },
+    {
+      "id": "ace-of-spades",
+      "category": "objects",
+      "title": "Large Format Wine Cradles",
+      "cardTitle": [
+        "Large Format",
+        "Wine Cradles"
+      ],
+      "code": "WINE CRADLES / 10",
+      "lane": "Objects",
+      "type": "Bottle Presentation Cradles",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/display-systems/ace-of-spades/3084DC79-F379-476B-9485-0B53B4D44C07.png",
+      "purpose": "Custom cradles for 6–15L bottles, designed to support oversized formats while creating a more sculptural presentation moment.",
+      "role": "Concept Design, Structural Development, 3D Visualization"
+    },
+    {
+      "id": "don-julio-fifa-kit",
+      "category": "products",
+      "title": "1942 x FIFA World Cup Case",
+      "cardTitle": [
+        "1942 x FIFA",
+        "World Cup Case"
+      ],
+      "code": "WORLD CUP KIT / 17",
+      "lane": "Kits",
+      "type": "Presentation Kit",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/product-packaging/don-julio-x-fifa-kit/02-open-case-bottle-display.png",
+      "purpose": "A limited-edition gift case concept developed around structural reveal, illuminated bottle display, miniature storage, and branded case details.",
+      "role": "Design Development, Structural Development, 3D Visualization"
+    },
+    {
+      "id": "buchanans-green-seal",
+      "category": "products",
+      "title": "Buchanan’s Green Seal",
+      "cardTitle": [
+        "Buchanan’s",
+        "Green Seal"
+      ],
+      "code": "GREEN SEAL LAUNCH / 18",
+      "lane": "Packaging",
+      "type": "Launch Kit",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/product-packaging/buchanans-green-seal-gifting-kit/01-bottle-and-rounder-hero.png",
+      "purpose": "A launch kit concept built around bottle presentation, structural packaging, display elements, and supporting collateral.",
+      "role": "Packaging Development, Product Presentation, 3D Visualization"
+    },
+    {
+      "id": "ciroc-rtd",
+      "category": "products",
+      "title": "Ciroc Spritz Launch Kit",
+      "cardTitle": [
+        "Ciroc Spritz",
+        "Launch Kit"
+      ],
+      "code": "CIROC SPRITZ / 19",
+      "lane": "Launch",
+      "type": "Product Launch Kit",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/product-packaging/ciroc-rtd-launch/02-launch-kit-components.png",
+      "purpose": "A launch kit concept for canned cocktails, combining branded packaging, collateral, and lifestyle gifting.",
+      "role": "Product Presentation, Design Development, 3D Visualization"
+    },
+    {
+      "id": "wild-turkey-gifting",
+      "category": "products",
+      "title": "Wild Turkey Gifting Kit",
+      "cardTitle": [
+        "Wild Turkey",
+        "Gifting Kit"
+      ],
+      "code": "WILD TURKEY KIT / 20",
+      "lane": "Packaging",
+      "type": "Multi-Level Gifting Kit",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/product-packaging/wild-turkey-gifting/03-open-gift-kit.png",
+      "purpose": "A tiered gifting kit concept developed around bottle presentation, recipe components, accessory storage, and a structured reveal.",
+      "role": "Packaging Development, Structural Development, 3D Visualization"
+    },
+    {
+      "id": "lagavulin-ambassador-kit",
+      "category": "products",
+      "title": "Lagavulin Account Kit",
+      "cardTitle": [
+        "Lagavulin",
+        "Account Kit"
+      ],
+      "code": "LAGAVULIN / 21",
+      "lane": "Kits",
+      "type": "Brand Ambassador Kit",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/product-packaging/lagavulin-brand-ambassador-kit/01-open-ambassador-kit.png",
+      "purpose": "A portable presentation kit designed for account visits, with bottle storage, tasting tools, serving pieces, and layered brand information.",
+      "role": "Design Development, Structural Development, 3D Visualization"
+    },
+    {
+      "id": "mortlach-ambassador-kit",
+      "category": "products",
+      "title": "Mortlach Presentation Kit",
+      "cardTitle": [
+        "Mortlach",
+        "Presentation Kit"
+      ],
+      "code": "MORTLACH KIT / 22",
+      "lane": "Kits",
+      "type": "Brand Ambassador Kit",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/product-packaging/mortlach-brand-ambassador-kit/01-open-blue-kit.png",
+      "purpose": "A premium presentation kit for account visits, with bottle staging, tasting tools, layered case details, and a structured brand reveal.",
+      "role": "Design Development, Structural Development, 3D Visualization"
+    },
+    {
+      "id": "oban-ambassador-kit",
+      "category": "products",
+      "title": "Oban Account Kit",
+      "cardTitle": [
+        "Oban",
+        "Account Kit"
+      ],
+      "code": "OBAN KIT / 23",
+      "lane": "Kits",
+      "type": "Brand Ambassador Kit",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/product-packaging/oban-brand-ambassador-kit/01-open-leather-case.png",
+      "purpose": "A portable account presentation kit designed around bottle storage, tasting tools, leather case details, and brand storytelling.",
+      "role": "Design Development, Structural Development, 3D Visualization"
+    },
+    {
+      "id": "revolve-porsche-scarf-kit",
+      "category": "products",
+      "title": "Revolve x Porsche Gifting Kit",
+      "cardTitle": [
+        "Revolve x Porsche",
+        "Gifting Kit"
+      ],
+      "code": "SCARF GIFTING / 24",
+      "lane": "Packaging",
+      "type": "Gift Box",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/product-packaging/revolve-x-porsche-scarf-kit/02-open-scarf-box.png",
+      "purpose": "A wood gift-box concept for a textile reveal, designed around restrained material details, a clean interior presentation, and a tactile closure moment.",
+      "role": "Packaging Development, Product Presentation, 3D Visualization"
+    },
+    {
+      "id": "bubble-generator",
+      "category": "systems",
+      "title": "Procedural Carbonation System",
+      "cardTitle": [
+        "Procedural",
+        "Carbonation System"
+      ],
+      "code": "CARBONATION SYSTEM / 24",
+      "lane": "Procedural",
+      "type": "Procedural System",
+      "tools": "Custom Visual Tool",
+      "image": "work/process-systems/bubble-generator/01-module-01.webp",
+      "purpose": "Procedural setup for generating controlled visual variations and material outputs.",
+      "role": "Procedural System Design, Visual Workflow Development"
+    },
+    {
+      "id": "bumblebee-display",
+      "category": "systems",
+      "title": "Bumblebee Theatrical Display",
+      "code": "BUMBLEBEE / 28",
+      "lane": "Entertainment",
+      "type": "Theatrical Display",
+      "tools": "3D / Display",
+      "image": "work/process-systems/bumblebee-theatrical-display/01-module-01.png",
+      "purpose": "Character-driven theatrical display with a clear retail footprint.",
+      "role": "Display Concepting, Structural Development, 3D Visualization"
+    },
+    {
+      "id": "billboards",
+      "category": "systems",
+      "title": "Billboards",
+      "code": "BILLBOARDS / 29",
+      "lane": "Archive",
+      "type": "Campaign Structures",
+      "tools": "3D / Key Art",
+      "image": "work/process-systems/billboards/01-module-01.jpg",
+      "purpose": "Earlier billboard and campaign structure work that shows entertainment-advertising range.",
+      "role": "Creative Direction, Campaign Visualization"
+    },
+    {
+      "id": "permanent-displays",
+      "category": "systems",
+      "title": "Permanent Displays & Products",
+      "code": "PERMANENT DISPLAYS / 30",
+      "lane": "Archive",
+      "type": "Display Archive",
+      "tools": "3D / Retail",
+      "image": "work/process-systems/permanent-displays-products/01-module-01.jpg",
+      "purpose": "Earlier display and product experiments kept as range, not as the lead story.",
+      "role": "Display Development, Product Presentation, 3D Visualization"
+    }
+  ],
+  "workItems": [
+    {
+      "id": "don-julio-suite-room",
+      "category": "environments",
+      "title": "Don Julio World Cup Suite",
+      "cardTitle": [
+        "Don Julio",
+        "World Cup Suite"
+      ],
+      "code": "WORLD CUP SUITE / 01",
+      "lane": "Hospitality",
+      "type": "Hospitality Environment",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/spaces/don-julio-suite/84088131-44CB-471A-ACA0-6AE726D2DC47.png",
+      "images": [
+        "work/spaces/don-julio-suite/84088131-44CB-471A-ACA0-6AE726D2DC47.png",
+        "work/spaces/don-julio-suite/047BC666-9C3C-484B-A509-2E42B90049C8.png",
+        "work/spaces/don-julio-suite/1E36DF1C-7962-4ECB-858A-5B9E5EF782D1.png",
+        "work/spaces/don-julio-suite/78ECD07D-69BD-4972-97A2-F13853B19BCA.png",
+        "work/spaces/don-julio-suite/957DDEB9-EDFB-4136-A0EE-E0B5899948FC.png"
+      ],
+      "purpose": "A branded stadium suite concept combining lounge seating, bar service, product display, and guest-facing details for a premium match-day experience.",
+      "role": "Spatial Design, Design Development, 3D Visualization",
+      "featured": true
+    },
+    {
+      "id": "diageo-private-club",
+      "category": "environments",
+      "title": "Diageo Champions Club",
+      "cardTitle": [
+        "Diageo",
+        "Champions Club"
+      ],
+      "code": "CHAMPIONS CLUB / 02",
+      "lane": "Hospitality",
+      "type": "Premium Stadium Lounge",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/spaces/diageo-private-lounge/01-lounge-wide.png",
+      "images": [
+        "work/spaces/diageo-private-lounge/01-lounge-wide.png",
+        "work/spaces/diageo-private-lounge/02-champions-club-entry.png",
+        "work/spaces/diageo-private-lounge/03-bar-backwall.png",
+        "work/spaces/diageo-private-lounge/04-lounge-seating.png",
+        "work/spaces/diageo-private-lounge/FE88D1DD-BF35-4CCF-9E42-D90059E1AC6E.png"
+      ],
+      "purpose": "A premium hospitality lounge concept combining bar service, seated social areas, presentation zones, and branded moments within a stadium setting.",
+      "role": "Spatial Design, Design Development, 3D Visualization",
+      "featured": true
+    },
+    {
+      "id": "alma-miel-dinner-room",
+      "category": "environments",
+      "title": "Alma Miel Dinner Series",
+      "cardTitle": [
+        "Alma Miel",
+        "Dinner Series"
+      ],
+      "code": "ALMA MIEL / 03",
+      "lane": "Dining",
+      "type": "Branded Dinner Experience",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/spaces/alma-miel-dinner-series/03-branded-dining-room.png",
+      "images": [
+        "work/spaces/alma-miel-dinner-series/03-branded-dining-room.png",
+        "work/spaces/alma-miel-dinner-series/3E7216F1-54ED-40A3-9991-D0BA66E350A8.png",
+        "work/spaces/alma-miel-dinner-series/module-07.webp",
+        "work/spaces/alma-miel-dinner-series/04-brick-dining-room.png",
+        "work/spaces/alma-miel-dinner-series/01-dinner-room-angle.png",
+        "work/spaces/alma-miel-dinner-series/02-dinner-room-wide.png"
+      ],
+      "purpose": "A dinner-series concept developed for multiple city settings, using warm lighting, layered tablescapes, product presentation, and flexible dining layouts.",
+      "role": "Spatial Design, Design Development, 3D Visualization"
+    },
+    {
+      "id": "don-julio-margarita-world-activation",
+      "category": "environments",
+      "title": "Don Julio Margarita World",
+      "cardTitle": [
+        "Margarita World"
+      ],
+      "leadTitle": [
+        "Don Julio",
+        "Margarita World"
+      ],
+      "code": "MARGARITA WORLD / 05",
+      "lane": "Activations",
+      "type": "Outdoor Activation Concept",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/spaces/don-julio-margarita-world/01-margarita-world-hero.png",
+      "images": [
+        "work/spaces/don-julio-margarita-world/01-margarita-world-hero.png",
+        "work/spaces/don-julio-margarita-world/34A56897-F2C6-41B6-AAC9-D61E2C769718.png",
+        "work/spaces/don-julio-margarita-world/762E30CF-0E86-41C2-9EBE-C9636A8208AA.png",
+        "work/spaces/don-julio-margarita-world/8F42E929-A129-485B-9A51-25306E0306E4.png",
+        "work/spaces/don-julio-margarita-world/D04FFA39-045B-438C-9416-9B3D7699FAD1.png",
+        "work/spaces/don-julio-margarita-world/DBB93316-7069-4378-87BD-271645DAA800.png",
+        "work/spaces/don-julio-margarita-world/E0E4A6B1-FA12-4081-912D-634318B44592.png"
+      ],
+      "purpose": "Concept design and spatial guidance for an outdoor brand environment, including architectural facades, social areas, and guest flow.",
+      "role": "Concept Design, Spatial Design, 3D Visualization",
+      "featured": true
+    },
+    {
+      "id": "don-julio-paloma-world",
+      "category": "environments",
+      "title": "Doña Paloma Activation",
+      "cardTitle": [
+        "Doña Paloma",
+        "Activation"
+      ],
+      "code": "DOÑA PALOMA / 06",
+      "lane": "Activations",
+      "type": "Outdoor Brand Environment",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/spaces/don-julio-paloma/05-paloma-world-hero.png",
+      "images": [
+        "work/spaces/don-julio-paloma/05-paloma-world-hero.png",
+        "work/spaces/don-julio-paloma/01-paloma-pool-cabana.png",
+        "work/spaces/don-julio-paloma/02-paloma-pool-lettering.png",
+        "work/spaces/don-julio-paloma/03-paloma-cabana-interior.png",
+        "work/spaces/don-julio-paloma/04-paloma-pool-bar.png",
+        "work/spaces/don-julio-paloma/image2.png"
+      ],
+      "purpose": "A color-forward activation concept developed around scenic entry moments, lounge cues, product presentation, and guest-facing spatial guidance.",
+      "role": "Concept Design, Scenic Development, 3D Visualization"
+    },
+    {
+      "id": "gray-malin-pool-lounge",
+      "category": "environments",
+      "title": "Gray Malin X Four Seasons",
+      "cardTitle": [
+        "Gray Malin",
+        "X Four Seasons"
+      ],
+      "code": "RESORT PROGRAM / 07",
+      "lane": "Hospitality",
+      "type": "Resort Hospitality Program",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/spaces/gray-malin-x-four-seasons-x-don-julio-program/6EE78ADB-783A-4400-BA41-78484BF587EC.png",
+      "images": [
+        "work/spaces/gray-malin-x-four-seasons-x-don-julio-program/6EE78ADB-783A-4400-BA41-78484BF587EC.png",
+        "work/spaces/gray-malin-x-four-seasons-x-don-julio-program/01-pool-cabana-front.png",
+        "work/spaces/gray-malin-x-four-seasons-x-don-julio-program/02-beach-loungers.png",
+        "work/spaces/gray-malin-x-four-seasons-x-don-julio-program/03-beach-firepit-program.png",
+        "work/spaces/gray-malin-x-four-seasons-x-don-julio-program/26D73288-E6F2-4F01-BC5C-785C177D4978.png",
+        "work/spaces/gray-malin-x-four-seasons-x-don-julio-program/307BC622-8F2D-469A-A8F0-50BED59117D4.png",
+        "work/spaces/gray-malin-x-four-seasons-x-don-julio-program/43CFCF43-5C8D-4D09-BFDA-3158E9A67AD3.png",
+        "work/spaces/gray-malin-x-four-seasons-x-don-julio-program/793385AA-A878-4BE7-9113-5B045063E05A.png"
+      ],
+      "purpose": "Poolside and beachside hospitality concepts built around service objects, branded moments, and relaxed resort pacing.",
+      "role": "Spatial Development, Staging, 3D Visualization"
+    },
+    {
+      "id": "bar-systems",
+      "category": "environments",
+      "title": "Custom Bar Concepts",
+      "cardTitle": [
+        "Custom Bar",
+        "Concepts"
+      ],
+      "code": "BARS / 09",
+      "lane": "Bars",
+      "type": "Custom Bar Concepts",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/spaces/bars-combined/C3EE35E7-AB98-4A07-9569-8E0F149D0B60.png",
+      "images": [
+        "work/spaces/bars-combined/C3EE35E7-AB98-4A07-9569-8E0F149D0B60.png",
+        "work/spaces/bars-combined/07-lucky-chap-backbar.png",
+        "work/spaces/bars-combined/01-beach-happy-hour-bar.png",
+        "work/spaces/bars-combined/02-don-julio-mobile-bar.png",
+        "work/spaces/bars-combined/816F94A1-01F3-45EC-B948-39DD0A26C02F.png",
+        "work/spaces/bars-combined/04-diageo-arched-backbar.png",
+        "work/spaces/bars-combined/03-ketel-one-black-bar.png",
+        "work/spaces/bars-combined/75C956B6-C81E-452D-B49F-4A6B613CDFFF.png",
+        "work/spaces/bars-combined/05-diageo-white-bar.png",
+        "work/spaces/bars-combined/06-dark-lounge-bar.png"
+      ],
+      "purpose": "Bar, backbar, service, and fixture concepts designed for branded hospitality environments, events, and built spatial moments.",
+      "role": "Bar Design, Fixture Development, 3D Visualization"
+    },
+    {
+      "id": "don-julio-super-bowl-party",
+      "category": "environments",
+      "title": "Don Julio Super Bowl",
+      "cardTitle": [
+        "Don Julio",
+        "Super Bowl"
+      ],
+      "code": "SUPER BOWL LX / 08",
+      "lane": "Events",
+      "type": "Branded Event Environment",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/spaces/don-julio-super-bowl-lx-party/03-rocket-stage-wall.png",
+      "images": [
+        "work/spaces/don-julio-super-bowl-lx-party/03-rocket-stage-wall.png",
+        "work/spaces/don-julio-super-bowl-lx-party/02-banquette-lounge.png",
+        "work/spaces/don-julio-super-bowl-lx-party/04-event-stage-wide.png",
+        "work/spaces/don-julio-super-bowl-lx-party/01-orange-bar-wall.png"
+      ],
+      "purpose": "A large-scale event concept shaped through branded staging, lounge areas, performance moments, and hospitality presentation.",
+      "role": "Spatial Design, Presentation Development, 3D Visualization"
+    },
+    {
+      "id": "ace-of-spades-fixture",
+      "category": "displays",
+      "title": "Large Format Wine Cradles",
+      "cardTitle": [
+        "Large Format",
+        "Wine Cradles"
+      ],
+      "code": "WINE CRADLES / 10",
+      "lane": "Glorifiers",
+      "type": "Bottle Presentation Cradles",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/display-systems/ace-of-spades/3084DC79-F379-476B-9485-0B53B4D44C07.png",
+      "images": [
+        "work/display-systems/ace-of-spades/3084DC79-F379-476B-9485-0B53B4D44C07.png",
+        "work/display-systems/ace-of-spades/3D67B570-0685-4FC1-AFA9-F72A5F80E77A.png",
+        "work/display-systems/ace-of-spades/8E87529A-4D8B-4B63-9020-033DE6E9CD15.png",
+        "work/display-systems/ace-of-spades/23E48C56-6D84-4A06-8D62-38A14779622C.png",
+        "work/display-systems/ace-of-spades/28A9699F-EB2A-43A2-8A69-F7D0EDCE43AD.png",
+        "work/display-systems/ace-of-spades/92B1331F-0482-440F-A8FE-62DD6295784B.png",
+        "work/display-systems/ace-of-spades/B273D1A3-8A3A-40FC-8EF7-D069E3F305D1.png",
+        "work/display-systems/ace-of-spades/C4E942BA-7044-4C23-AA27-1A5C26CA2596.png"
+      ],
+      "purpose": "Custom cradles for 6–15L bottles, designed to support oversized formats while creating a more sculptural presentation moment.",
+      "role": "Concept Design, Structural Development, 3D Visualization"
+    },
+    {
+      "id": "don-julio-margarita-cart",
+      "category": "displays",
+      "title": "Margarita Cart",
+      "cardTitle": [
+        "Margarita",
+        "Cart"
+      ],
+      "code": "MARGARITA CART / 11",
+      "lane": "Service Carts",
+      "type": "Branded Bar Cart",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/display-systems/don-julio-margarita-cart/9257F97C-FE50-4517-9604-7998E22DA4A9.png",
+      "images": [
+        "work/display-systems/don-julio-margarita-cart/9257F97C-FE50-4517-9604-7998E22DA4A9.png",
+        "work/display-systems/don-julio-margarita-cart/5C4B1785-F649-4A32-AFD1-3C0159910B13.png",
+        "work/display-systems/don-julio-margarita-cart/B94D4165-D5E5-43F2-B270-C6B09BA800E1.png",
+        "work/display-systems/don-julio-margarita-cart/E9D55B63-305A-45FA-8BD7-1F77056EDBBB.png"
+      ],
+      "purpose": "A pre-existing cart reworked into a Don Julio service piece, with bottle display, serveware storage, prep areas, and bartender-facing organization.",
+      "role": "Design Development, Structural Development, 3D Visualization",
+      "featured": true
+    },
+    {
+      "id": "don-julio-1942-on-trade-tools",
+      "category": "displays",
+      "title": "1942 Summer Tool Kit",
+      "cardTitle": [
+        "1942 Summer",
+        "Tool Kit"
+      ],
+      "code": "1942 TOOL KIT / 12",
+      "lane": "Tabletop",
+      "type": "Account Service Kit",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/display-systems/don-julio-1942-on-trade/33748F77-4D50-4DB9-A890-6BC48E3D8DEC.png",
+      "images": [
+        "work/display-systems/don-julio-1942-on-trade/33748F77-4D50-4DB9-A890-6BC48E3D8DEC.png",
+        "work/display-systems/don-julio-1942-on-trade/03-module-03.png",
+        "work/display-systems/don-julio-1942-on-trade/06-module-06.webp",
+        "work/display-systems/don-julio-1942-on-trade/07-module-07.webp",
+        "work/display-systems/don-julio-1942-on-trade/107A8848-AE57-42D0-802B-E5728DB1A962.png",
+        "work/display-systems/don-julio-1942-on-trade/6DF9F32E-40DB-4391-B10A-514108753BA9.png",
+        "work/display-systems/don-julio-1942-on-trade/C7D03328-58C2-4A49-9411-355491AD3F54.png"
+      ],
+      "purpose": "A collection of branded account tools and promotional pieces designed to support serve moments, bottle presentation, and on-premise brand visibility.",
+      "role": "Design Development, Service System Development, 3D Visualization"
+    },
+    {
+      "id": "buchanans-fifa-tools",
+      "category": "displays",
+      "title": "Buchanan’s World Cup Kit",
+      "cardTitle": [
+        "Buchanan’s",
+        "World Cup Kit"
+      ],
+      "code": "WORLD CUP TOOL KIT / 13",
+      "lane": "Service Tools",
+      "type": "Account Display Kit",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/display-systems/buchanans-x-fifa/01-module-01.webp",
+      "images": [
+        "work/display-systems/buchanans-x-fifa/01-module-01.webp",
+        "work/display-systems/buchanans-x-fifa/1386D3AA-8783-43B1-AE68-0B944C2D4E61.png",
+        "work/display-systems/buchanans-x-fifa/66DEADE6-293D-4950-8FDB-CC553F0FE3A1.png",
+        "work/display-systems/buchanans-x-fifa/7F6BA793-01B2-459F-B315-68716291296E.png",
+        "work/display-systems/buchanans-x-fifa/BCC3D27C-32A0-4E2E-8B6F-1A79E1F089B7.png",
+        "work/display-systems/buchanans-x-fifa/C6CADC2E-7B5C-460F-B250-BB3EFE954579.png",
+        "work/display-systems/buchanans-x-fifa/E6B3719E-5CB5-4C33-9395-FBB001E9EAD1.png"
+      ],
+      "purpose": "A campaign toolkit for on-premise accounts, with tabletop displays, service pieces, branded signage, and FIFA-linked promotional elements.",
+      "role": "Design Development, Structural Development, 3D Visualization",
+      "featured": true
+    },
+    {
+      "id": "don-julio-margarita-world-tools",
+      "category": "displays",
+      "title": "Margarita World Service Tools",
+      "cardTitle": [
+        "Margarita World",
+        "Service Tools"
+      ],
+      "code": "MARGARITA TOOLS / 14",
+      "lane": "Service Tools",
+      "type": "Activation Tool Kit",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/display-systems/don-julio-margarita-world/17629057-5523-4D6E-8FC0-0D71917423D2.png",
+      "images": [
+        "work/display-systems/don-julio-margarita-world/17629057-5523-4D6E-8FC0-0D71917423D2.png",
+        "work/display-systems/don-julio-margarita-world/302A800E-629E-49D7-9AB4-15EBDA950D81.png",
+        "work/display-systems/don-julio-margarita-world/8611A040-65E9-47E3-95D9-EE382D693A7B.png",
+        "work/display-systems/don-julio-margarita-world/CF168551-2019-49E4-B5E0-B4C76567BA13.png",
+        "work/display-systems/don-julio-margarita-world/D895BEA4-8069-4604-910E-CA8F8D5A9541.png",
+        "work/display-systems/don-julio-margarita-world/EAC7A221-3BC3-44DA-A078-A36F05F2878C.png"
+      ],
+      "purpose": "A set of support objects developed for the Margarita World activation, including trays, serve pieces, and guest-facing service details.",
+      "role": "Design Development, Service Tooling, 3D Visualization"
+    },
+    {
+      "id": "don-julio-paloma-tools",
+      "category": "displays",
+      "title": "Paloma Service Tools",
+      "cardTitle": [
+        "Paloma",
+        "Service Tools"
+      ],
+      "code": "PALOMA TOOLS / 15",
+      "lane": "Service Tools",
+      "type": "Activation Tool Kit",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/display-systems/don-julio-paloma/3CB64CD5-C12E-4BE0-8857-C6B2B12BD7AA.png",
+      "images": [
+        "work/display-systems/don-julio-paloma/3CB64CD5-C12E-4BE0-8857-C6B2B12BD7AA.png",
+        "work/display-systems/don-julio-paloma/8BC8B612-3B06-4164-B9C1-8AA2B5719E46.png",
+        "work/display-systems/don-julio-paloma/C008AA69-EB18-4534-9F2C-FFE150DEEE3F.png",
+        "work/display-systems/don-julio-paloma/C32EBAD8-F922-4933-B95B-FF52C9ACB3E8.png",
+        "work/display-systems/don-julio-paloma/06-module-07.webp"
+      ],
+      "purpose": "A set of support objects developed for the Doña Paloma activation, including trays, serve pieces, garnish moments, and guest-facing service details.",
+      "role": "Design Development, Service Tooling, 3D Visualization"
+    },
+    {
+      "id": "deleon-on-premise-tools",
+      "category": "displays",
+      "title": "Deleón On-Premise Kit",
+      "cardTitle": [
+        "Deleón",
+        "On-Premise Kit"
+      ],
+      "code": "DELEÓN KIT / 16",
+      "lane": "Service Tools",
+      "type": "Service & Display Kit",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/display-systems/deleon-on-premis-tools/0414F596-64C3-4CCE-AEEA-9EDE2F61857C.png",
+      "images": [
+        "work/display-systems/deleon-on-premis-tools/0414F596-64C3-4CCE-AEEA-9EDE2F61857C.png",
+        "work/display-systems/deleon-on-premis-tools/0DDCC6B8-B7BE-4918-A491-2C1D9FAC5E82.png",
+        "work/display-systems/deleon-on-premis-tools/42E1B1AC-9D3A-4AA1-BB79-D4B3F976A002.png",
+        "work/display-systems/deleon-on-premis-tools/9CBF0CC8-F4C3-4E8E-AB4B-E1D1B4265487.png",
+        "work/display-systems/deleon-on-premis-tools/9F2427D7-6E06-470D-9FF8-819EF3FD5338.png"
+      ],
+      "purpose": "A set of account-ready service and display pieces developed to support bottle presentation, group serves, and branded on-premise moments.",
+      "role": "Design Development, Service Tooling, 3D Visualization"
+    },
+    {
+      "id": "johnnie-walker-ot-assets",
+      "category": "displays",
+      "title": "Johnnie Walker Bar Assets",
+      "cardTitle": [
+        "Johnnie Walker",
+        "Bar Assets"
+      ],
+      "code": "JW TOOL KIT / 17",
+      "lane": "Fixtures",
+      "type": "On-Trade Display Kit",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/display-systems/johnnie-walker-ot-assets/460E49BD-435C-41B8-B096-AEA5D0BBFF43.png",
+      "images": [
+        "work/display-systems/johnnie-walker-ot-assets/460E49BD-435C-41B8-B096-AEA5D0BBFF43.png",
+        "work/display-systems/johnnie-walker-ot-assets/07673D72-9ACA-4EF5-B8FC-81903B3766C8.png",
+        "work/display-systems/johnnie-walker-ot-assets/DA4610A8-6A67-4E1F-AB46-C44CA3910ACA.png",
+        "work/display-systems/johnnie-walker-ot-assets/B59F5B07-D74B-4B73-B74C-A5E955E8BE85.png",
+        "work/display-systems/johnnie-walker-ot-assets/38D8F82D-ACBA-47F8-8AE5-D930C177AFF4.png",
+        "work/display-systems/johnnie-walker-ot-assets/493BC3BB-EC18-4451-8AD1-16F22FD748A7.png",
+        "work/display-systems/johnnie-walker-ot-assets/9DE573A4-877F-4A00-9FC5-1079AEB64197.png",
+        "work/display-systems/johnnie-walker-ot-assets/C0601AEB-10A0-421C-B242-B5160105CD07.png",
+        "work/display-systems/johnnie-walker-ot-assets/13-module-13.webp"
+      ],
+      "purpose": "A set of account-ready display pieces developed around product presence, light, cocktail service, and branded bar details.",
+      "role": "Display Design, Presentation Development, 3D Visualization",
+      "featured": true
+    },
+    {
+      "id": "don-julio-fifa-kit-case",
+      "category": "products",
+      "title": "1942 x FIFA World Cup Case",
+      "cardTitle": [
+        "1942 x FIFA",
+        "World Cup Case"
+      ],
+      "code": "WORLD CUP KIT / 17",
+      "lane": "Kits",
+      "type": "Presentation Kit",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/product-packaging/don-julio-x-fifa-kit/02-open-case-bottle-display.png",
+      "images": [
+        "work/product-packaging/don-julio-x-fifa-kit/02-open-case-bottle-display.png",
+        "work/product-packaging/don-julio-x-fifa-kit/01-green-case-closed.png",
+        "work/product-packaging/don-julio-x-fifa-kit/03-green-case-front.png"
+      ],
+      "purpose": "A limited-edition gift case concept developed around structural reveal, illuminated bottle display, miniature storage, and branded case details.",
+      "role": "Design Development, Structural Development, 3D Visualization"
+    },
+    {
+      "id": "buchanans-green-seal-kit",
+      "category": "products",
+      "title": "Buchanan’s Green Seal",
+      "cardTitle": [
+        "Buchanan’s",
+        "Green Seal"
+      ],
+      "code": "GREEN SEAL LAUNCH / 18",
+      "lane": "Packaging",
+      "type": "Launch Kit",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/product-packaging/buchanans-green-seal-gifting-kit/01-bottle-and-rounder-hero.png",
+      "images": [
+        "work/product-packaging/buchanans-green-seal-gifting-kit/01-bottle-and-rounder-hero.png",
+        "work/product-packaging/buchanans-green-seal-gifting-kit/02-green-box-closed.png",
+        "work/product-packaging/buchanans-green-seal-gifting-kit/03-open-display-kit.jpg"
+      ],
+      "purpose": "A launch kit concept built around bottle presentation, structural packaging, display elements, and supporting collateral.",
+      "role": "Packaging Development, Product Presentation, 3D Visualization"
+    },
+    {
+      "id": "ciroc-rtd-launch-kit",
+      "category": "products",
+      "title": "Ciroc Spritz Launch Kit",
+      "cardTitle": [
+        "Ciroc Spritz",
+        "Launch Kit"
+      ],
+      "code": "CIROC SPRITZ / 19",
+      "lane": "Launch",
+      "type": "Product Launch Kit",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/product-packaging/ciroc-rtd-launch/02-launch-kit-components.png",
+      "images": [
+        "work/product-packaging/ciroc-rtd-launch/02-launch-kit-components.png",
+        "work/product-packaging/ciroc-rtd-launch/01-white-box-closed.png",
+        "work/product-packaging/ciroc-rtd-launch/03-cans-and-serve-tray.png",
+        "work/product-packaging/ciroc-rtd-launch/04-topdown-cans-kit.png"
+      ],
+      "purpose": "A launch kit concept for canned cocktails, combining branded packaging, collateral, and lifestyle gifting.",
+      "role": "Product Presentation, Design Development, 3D Visualization",
+      "featured": true
+    },
+    {
+      "id": "wild-turkey-gift-box",
+      "category": "products",
+      "title": "Wild Turkey Gifting Kit",
+      "cardTitle": [
+        "Wild Turkey",
+        "Gifting Kit"
+      ],
+      "code": "WILD TURKEY KIT / 20",
+      "lane": "Packaging",
+      "type": "Multi-Level Gifting Kit",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/product-packaging/wild-turkey-gifting/03-open-gift-kit.png",
+      "images": [
+        "work/product-packaging/wild-turkey-gifting/03-open-gift-kit.png",
+        "work/product-packaging/wild-turkey-gifting/01-red-box-closed.png",
+        "work/product-packaging/wild-turkey-gifting/02-open-box-layout.png",
+        "work/product-packaging/wild-turkey-gifting/04-red-box-top.png"
+      ],
+      "purpose": "A tiered gifting kit concept developed around bottle presentation, recipe components, accessory storage, and a structured reveal.",
+      "role": "Packaging Development, Structural Development, 3D Visualization"
+    },
+    {
+      "id": "lagavulin-ambassador-kit",
+      "category": "products",
+      "title": "Lagavulin Account Kit",
+      "cardTitle": [
+        "Lagavulin",
+        "Account Kit"
+      ],
+      "code": "LAGAVULIN / 21",
+      "lane": "Kits",
+      "type": "Brand Ambassador Kit",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/product-packaging/lagavulin-brand-ambassador-kit/01-open-ambassador-kit.png",
+      "images": [
+        "work/product-packaging/lagavulin-brand-ambassador-kit/01-open-ambassador-kit.png",
+        "work/product-packaging/lagavulin-brand-ambassador-kit/02-open-kit-angle.png",
+        "work/product-packaging/lagavulin-brand-ambassador-kit/03-green-case-front.png",
+        "work/product-packaging/lagavulin-brand-ambassador-kit/04-wood-case-closed.png"
+      ],
+      "purpose": "A portable presentation kit designed for account visits, with bottle storage, tasting tools, serving pieces, and layered brand information.",
+      "role": "Design Development, Structural Development, 3D Visualization",
+      "featured": true
+    },
+    {
+      "id": "mortlach-ambassador-kit",
+      "category": "products",
+      "title": "Mortlach Presentation Kit",
+      "cardTitle": [
+        "Mortlach",
+        "Presentation Kit"
+      ],
+      "code": "MORTLACH KIT / 22",
+      "lane": "Kits",
+      "type": "Brand Ambassador Kit",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/product-packaging/mortlach-brand-ambassador-kit/01-open-blue-kit.png",
+      "images": [
+        "work/product-packaging/mortlach-brand-ambassador-kit/01-open-blue-kit.png",
+        "work/product-packaging/mortlach-brand-ambassador-kit/02-blue-case-closed.png",
+        "work/product-packaging/mortlach-brand-ambassador-kit/03-blue-case-front.png",
+        "work/product-packaging/mortlach-brand-ambassador-kit/04-open-kit-bottles.png"
+      ],
+      "purpose": "A premium presentation kit for account visits, with bottle staging, tasting tools, layered case details, and a structured brand reveal.",
+      "role": "Design Development, Structural Development, 3D Visualization"
+    },
+    {
+      "id": "oban-ambassador-kit",
+      "category": "products",
+      "title": "Oban Account Kit",
+      "cardTitle": [
+        "Oban",
+        "Account Kit"
+      ],
+      "code": "OBAN KIT / 23",
+      "lane": "Kits",
+      "type": "Brand Ambassador Kit",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/product-packaging/oban-brand-ambassador-kit/01-open-leather-case.png",
+      "images": [
+        "work/product-packaging/oban-brand-ambassador-kit/01-open-leather-case.png",
+        "work/product-packaging/oban-brand-ambassador-kit/02-leather-case-closed.png",
+        "work/product-packaging/oban-brand-ambassador-kit/03-rolling-case-front.png",
+        "work/product-packaging/oban-brand-ambassador-kit/04-open-case-full-kit.png"
+      ],
+      "purpose": "A portable account presentation kit designed around bottle storage, tasting tools, leather case details, and brand storytelling.",
+      "role": "Design Development, Structural Development, 3D Visualization"
+    },
+    {
+      "id": "revolve-porsche-scarf-kit",
+      "category": "products",
+      "title": "Revolve x Porsche Gifting Kit",
+      "cardTitle": [
+        "Revolve x Porsche",
+        "Gifting Kit"
+      ],
+      "code": "SCARF GIFTING / 24",
+      "lane": "Packaging",
+      "type": "Gift Box",
+      "tools": "3D Modeling, Visualization",
+      "image": "work/product-packaging/revolve-x-porsche-scarf-kit/02-open-scarf-box.png",
+      "images": [
+        "work/product-packaging/revolve-x-porsche-scarf-kit/02-open-scarf-box.png",
+        "work/product-packaging/revolve-x-porsche-scarf-kit/01-wood-box-closed.png",
+        "work/product-packaging/revolve-x-porsche-scarf-kit/03-open-box-detail.png"
+      ],
+      "purpose": "A wood gift-box concept for a textile reveal, designed around restrained material details, a clean interior presentation, and a tactile closure moment.",
+      "role": "Packaging Development, Product Presentation, 3D Visualization"
+    },
+    {
+      "id": "theatrical-display-production-system",
+      "category": "systems",
+      "title": "Theatrical Display Production System",
+      "code": "THEATRICAL PIPELINE / 25",
+      "lane": "Pipelines",
+      "type": "3D-to-Fabrication Workflow",
+      "tools": "3D Modeling / Rhino Handoff / Fabrication",
+      "image": "work/process-systems/theatrical-display-production-system/01-bumblebee-poster.jpg",
+      "video": "work/process-systems/theatrical-display-production-system/01-bumblebee-turntable.mp4",
+      "images": [
+        "work/process-systems/theatrical-display-production-system/01-bumblebee-poster.jpg",
+        "work/process-systems/theatrical-display-production-system/02-rogue-one-poster.jpg",
+        "work/process-systems/theatrical-display-production-system/03-dm3-poster.jpg",
+        "work/process-systems/bumblebee-theatrical-display/01-module-01.png"
+      ],
+      "purpose": "A repeatable 3D-to-fabrication workflow for developing theatrical display concepts into Rhino-ready files for engineering, full-size production, and quarter-scale minis.",
+      "role": "Pipeline Development, Display Concepting, 3D Production Handoff"
+    },
+    {
+      "id": "procedural-magnetic-box-system",
+      "category": "systems",
+      "title": "Procedural Magnetic Box System",
+      "code": "MAGNETIC BOX / 26",
+      "lane": "Procedural",
+      "type": "Geometry Nodes Packaging System",
+      "tools": "Blender / Geometry Nodes",
+      "image": "work/archive/product-packaging/sabrina-carpenter-cocktail-kit/4CF69FEC-8D67-406B-87C5-6D2EEA4EE12E.png",
+      "images": [
+        "work/archive/product-packaging/sabrina-carpenter-cocktail-kit/4CF69FEC-8D67-406B-87C5-6D2EEA4EE12E.png",
+        "work/archive/product-packaging/sabrina-carpenter-cocktail-kit/53056DD3-D39E-441F-B5DC-09CDCDB60580.png",
+        "work/process-systems/procedural-magnetic-box-system/02-node-tree-overview.jpg",
+        "work/process-systems/procedural-magnetic-box-system/03-parameter-controls.jpg",
+        "work/archive/product-packaging/sabrina-carpenter-cocktail-kit/C5154545-5444-465D-B5B3-DE55DAFA678F.png",
+        "work/archive/product-packaging/sabrina-carpenter-cocktail-kit/1D747044-3B59-4635-9754-15D1B75A002A.png"
+      ],
+      "purpose": "A reusable Geometry Nodes packaging system with editable inch-based controls for box size, lid state, wall thickness, tray, insert, and flap construction.",
+      "role": "Procedural System Design, Packaging Development, Visual Workflow Development"
+    },
+    {
+      "id": "nosferatu-prop-reconstruction",
+      "category": "systems",
+      "title": "Nosferatu Prop Build",
+      "code": "NOSFERATU / 27",
+      "lane": "Reconstruction",
+      "type": "Scan + Modeling Study",
+      "tools": "3D Scan Cleanup / Modeling / Materials",
+      "image": "work/process-systems/nosferatu-sarcophagus-sculpt/03-module-03.webp",
+      "images": [
+        "work/process-systems/nosferatu-sarcophagus-sculpt/03-module-03.webp",
+        "work/process-systems/nosferatu-sarcophagus-sculpt/01-module-01.webp",
+        "work/process-systems/nosferatu-sarcophagus-sculpt/02-module-02.webp",
+        "work/process-systems/nosferatu-sarcophagus-sculpt/04-module-04.webp"
+      ],
+      "purpose": "A hybrid scan and modeling study focused on rebuilding a film prop with enough form, material, and aging detail to read as a believable physical artifact.",
+      "role": "Scan Interpretation, Modeling, Material Reconstruction"
+    },
+    {
+      "id": "bubble-generator",
+      "category": "systems",
+      "title": "Procedural Carbonation System",
+      "cardTitle": [
+        "Procedural",
+        "Carbonation System"
+      ],
+      "code": "CARBONATION SYSTEM / 28",
+      "lane": "Procedural",
+      "type": "Procedural System",
+      "tools": "Custom Visual Tool",
+      "image": "work/process-systems/bubble-generator/01-module-01.webp",
+      "images": [
+        "work/process-systems/bubble-generator/01-module-01.webp",
+        "work/process-systems/bubble-generator/02-module-02.webp",
+        "work/process-systems/bubble-generator/03-module-03.webp",
+        "work/process-systems/bubble-generator/04-module-04.webp",
+        "work/process-systems/bubble-generator/05-module-05.webp"
+      ],
+      "purpose": "A procedural setup for building controlled drink, bubble, material, and output variations from a repeatable visual system.",
+      "role": "Procedural System Design, Look Development, Visual Workflow Development"
+    }
+  ]
+}

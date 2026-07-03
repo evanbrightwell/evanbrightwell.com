@@ -8,5 +8,6 @@ build/
 .netlify/
 coverage/
 tmp/
+_local-ingest/
 .env
 .env.local
