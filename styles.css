@@ -2475,10 +2475,13 @@ body[data-route="contact"] #work .landing-statement {
   }
 }
 
-@media (min-width: 901px) and (max-width: 1800px) {
-  body[data-route="bio"] .spatial-nav,
-  body[data-route="contact"] .spatial-nav {
-    display: none;
+@media (min-width: 1121px) and (max-width: 1800px) {
+  body[data-route="bio"],
+  body[data-route="contact"] {
+    --spatial-nav-width: min(220px, 18vw);
+    --spatial-plane-height: 130px;
+    --spatial-nav-right: clamp(18px, 2.5vw, 40px);
+    --spatial-nav-top: 720px;
   }
 }
 
