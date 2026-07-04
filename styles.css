@@ -2447,6 +2447,10 @@ body[data-route="contact"] #work .landing-statement {
 }
 
 @media (min-width: 901px) and (max-width: 1500px) {
+  .bio-layout {
+    grid-template-columns: minmax(260px, 280px) 380px;
+  }
+
   .bio-copy {
     gap: 14px;
   }
@@ -2472,16 +2476,6 @@ body[data-route="contact"] #work .landing-statement {
   .bio-facts dd {
     font-size: 12.5px;
     line-height: 1.32;
-  }
-}
-
-@media (min-width: 1121px) and (max-width: 1800px) {
-  body[data-route="bio"],
-  body[data-route="contact"] {
-    --spatial-nav-width: min(220px, 18vw);
-    --spatial-plane-height: 130px;
-    --spatial-nav-right: clamp(18px, 2.5vw, 40px);
-    --spatial-nav-top: 720px;
   }
 }
 
