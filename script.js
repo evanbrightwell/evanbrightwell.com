@@ -53,6 +53,7 @@ const centerNode = document.querySelector(".center-node");
 const laTime = document.querySelector("#la-time");
 const coordX = document.querySelector("#coord-x");
 const coordY = document.querySelector("#coord-y");
+const emailLinks = [...document.querySelectorAll("[data-email-link]")];
 
 let activeCategory = "all";
 let activeSlide = 0;
@@ -85,6 +86,21 @@ let categoryIds = [];
 let routeTargets = new Set();
 let sectionRouteIds = new Set();
 const siteWaypointTargets = new Set(["bio", "contact"]);
+
+function buildContactEmailHref(subject = "") {
+  const address = ["evanbrightwell", "me", "com"];
+  const href = `mailto:${address[0]}@${address[1]}.${address[2]}`;
+  return subject ? `${href}?subject=${encodeURIComponent(subject)}` : href;
+}
+
+function setupEmailLinks() {
+  emailLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.location.href = buildContactEmailHref(link.dataset.emailSubject || "");
+    });
+  });
+}
 
 function syncRouteCollections() {
   categoryIds = categories.map((category) => category.id);
@@ -915,6 +931,7 @@ function restoreRouteFromHash(options = {}) {
 
 function initializeSite() {
   syncRouteCollections();
+  setupEmailLinks();
   renderSpatialGrid();
   renderWorkArea();
   syncCategoryControls();
