@@ -25,10 +25,6 @@ const heroMeta = document.querySelector("#hero-meta");
 const activeIndex = document.querySelector("#active-index");
 const slideTotal = document.querySelector("#slide-total");
 const heroDots = document.querySelector("#hero-dots");
-const galleryLabel = document.querySelector("#gallery-label");
-const galleryTitle = document.querySelector("#gallery-title");
-const galleryIntro = document.querySelector("#gallery-intro");
-const galleryGrid = document.querySelector("#gallery-grid");
 const categoryLabel = document.querySelector("#category-label");
 const categoryTitle = document.querySelector("#category-title");
 const categoryIntro = document.querySelector("#category-intro");
@@ -104,8 +100,8 @@ function setupEmailLinks() {
 
 function syncRouteCollections() {
   categoryIds = categories.map((category) => category.id);
-  routeTargets = new Set(["top", "overview", "work", "gallery", "bio", "contact", ...categoryIds]);
-  sectionRouteIds = new Set(["gallery", "bio", "contact", ...categoryIds]);
+  routeTargets = new Set(["top", "overview", "work", "bio", "contact", ...categoryIds]);
+  sectionRouteIds = new Set(["bio", "contact", ...categoryIds]);
 }
 
 if (heroImage && heroImageFrame) {
@@ -348,58 +344,6 @@ function renderDots() {
         <button class="${index === activeSlide ? "active" : ""}" type="button" data-index="${index}" aria-label="Show ${project.title}">
           <span></span>
         </button>
-      `;
-    })
-    .join("");
-}
-
-function renderGallery() {
-  const category = categories.find((item) => item.id === activeCategory);
-  const visibleProjects = getVisibleProjects();
-
-  galleryGrid.classList.toggle("gallery-index", activeCategory === "all");
-
-  if (activeCategory === "all") {
-    galleryLabel.textContent = "Gallery";
-    galleryTitle.textContent = "Choose a visual lane.";
-    galleryIntro.textContent =
-      "A quieter index into selected spaces, displays, products, and process work.";
-    galleryGrid.innerHTML = categories
-      .map((item, index) => {
-        return `
-          <button class="gallery-item gallery-index-card" type="button" data-gallery-category="${item.id}">
-            <img src="${item.image}" alt="${item.title} gallery preview">
-            <span class="work-card-content">
-              <span class="work-card-number">${formatNumber(index + 1)}</span>
-              <span class="work-card-title">${item.title}</span>
-              <span class="work-card-subtitle">${item.subtitle}</span>
-            </span>
-          </button>
-        `;
-      })
-      .join("");
-    return;
-  }
-
-  galleryLabel.textContent = category ? category.label : "Gallery";
-  galleryTitle.textContent = category
-    ? `Selected ${category.label.toLowerCase()}`
-    : "A broader visual pass through spaces, displays, products, and process work.";
-  galleryIntro.textContent = category
-    ? category.intro
-    : "Selected recent project images pulled from internal Behance project modules and a small set of Portfolio-folder previews.";
-
-  galleryGrid.innerHTML = visibleProjects
-    .map((project, index) => {
-      return `
-        <figure class="gallery-item project-card ${index % 5 === 0 ? "wide" : ""}">
-          <img src="${project.image}" alt="${project.title} project image">
-          <figcaption>
-            <strong>${project.title}</strong>
-            <span>${project.purpose}</span>
-            <small>${project.tools} / ${project.role}</small>
-          </figcaption>
-        </figure>
       `;
     })
     .join("");
@@ -781,7 +725,6 @@ function setCategory(category) {
   renderWorkArea();
   syncCategoryControls();
   setHeroSlide(0);
-  renderGallery();
   restartCarousel();
 }
 
@@ -853,7 +796,7 @@ function configureSpatialNav() {
 }
 
 function markWaypoint(target) {
-  const routeTarget = [...categoryIds, "gallery", "bio", "contact"].includes(target) ? target : "overview";
+  const routeTarget = [...categoryIds, "bio", "contact"].includes(target) ? target : "overview";
   const activeTarget = siteWaypointTargets.has(target) ? target : "overview";
   document.body.dataset.route = routeTarget;
   configureSpatialNav();
@@ -954,10 +897,6 @@ function setWaypoint(target, options = {}) {
     return;
   }
 
-  if (target === "gallery") {
-    setCategory("all");
-  }
-
   const section = document.querySelector(`#${target}`);
 
   runRouteChange(target, options, () => {
@@ -985,7 +924,6 @@ function initializeSite() {
   renderSpatialGrid();
   renderWorkArea();
   syncCategoryControls();
-  renderGallery();
   renderCategorySection("environments");
   setHeroSlide(0, true);
   markWaypoint("overview");
@@ -1021,15 +959,6 @@ heroDots.addEventListener("click", (event) => {
   if (!dot) return;
   setHeroSlide(Number(dot.dataset.index));
   restartCarousel();
-});
-
-galleryGrid.addEventListener("click", (event) => {
-  const card = event.target.closest("[data-gallery-category]");
-  if (!card) return;
-  setCategory(card.dataset.galleryCategory);
-  markWaypoint("gallery");
-  updateHash("gallery");
-  scrollToElement(document.querySelector("#top"), "smooth");
 });
 
 waypoints.forEach((waypoint) => {
