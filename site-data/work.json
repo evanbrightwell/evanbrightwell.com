@@ -429,7 +429,8 @@
       ],
       "purpose": "A branded stadium suite concept combining lounge seating, bar service, product display, and guest-facing details for a premium match-day experience.",
       "role": "Spatial Design, Design Development, 3D Visualization",
-      "featured": true
+      "featured": true,
+      "featuredOrder": 2
     },
     {
       "id": "diageo-private-club",
@@ -453,7 +454,8 @@
       ],
       "purpose": "A premium hospitality lounge concept combining bar service, seated social areas, presentation zones, and branded moments within a stadium setting.",
       "role": "Spatial Design, Design Development, 3D Visualization",
-      "featured": true
+      "featured": true,
+      "featuredOrder": 8
     },
     {
       "id": "alma-miel-dinner-room",
@@ -506,7 +508,8 @@
       ],
       "purpose": "Concept design and spatial guidance for an outdoor brand environment, including architectural facades, social areas, and guest flow.",
       "role": "Concept Design, Spatial Design, 3D Visualization",
-      "featured": true
+      "featured": true,
+      "featuredOrder": 4
     },
     {
       "id": "don-julio-paloma-world",
@@ -655,7 +658,8 @@
       ],
       "purpose": "A pre-existing cart reworked into a Don Julio service piece, with bottle display, serveware storage, prep areas, and bartender-facing organization.",
       "role": "Design Development, Structural Development, 3D Visualization",
-      "featured": true
+      "featured": true,
+      "featuredOrder": 7
     },
     {
       "id": "don-julio-1942-on-trade-tools",
@@ -705,8 +709,7 @@
         "work/display-systems/buchanans-x-fifa/E6B3719E-5CB5-4C33-9395-FBB001E9EAD1.png"
       ],
       "purpose": "A campaign toolkit for on-premise accounts, with tabletop displays, service pieces, branded signage, and FIFA-linked promotional elements.",
-      "role": "Design Development, Structural Development, 3D Visualization",
-      "featured": true
+      "role": "Design Development, Structural Development, 3D Visualization"
     },
     {
       "id": "don-julio-margarita-world-tools",
@@ -804,7 +807,9 @@
       ],
       "purpose": "A set of account-ready display pieces developed around product presence, light, cocktail service, and branded bar details.",
       "role": "Display Design, Presentation Development, 3D Visualization",
-      "featured": true
+      "featured": true,
+      "featuredImage": "work/display-systems/johnnie-walker-ot-assets/B59F5B07-D74B-4B73-B74C-A5E955E8BE85.png",
+      "featuredOrder": 6
     },
     {
       "id": "don-julio-fifa-kit-case",
@@ -825,7 +830,9 @@
         "work/product-packaging/don-julio-x-fifa-kit/03-green-case-front.png"
       ],
       "purpose": "A limited-edition gift case concept developed around structural reveal, illuminated bottle display, miniature storage, and branded case details.",
-      "role": "Design Development, Structural Development, 3D Visualization"
+      "role": "Design Development, Structural Development, 3D Visualization",
+      "featured": true,
+      "featuredOrder": 1
     },
     {
       "id": "buchanans-green-seal-kit",
@@ -868,8 +875,7 @@
         "work/product-packaging/ciroc-rtd-launch/04-topdown-cans-kit.png"
       ],
       "purpose": "A launch kit concept for canned cocktails, combining branded packaging, collateral, and lifestyle gifting.",
-      "role": "Product Presentation, Design Development, 3D Visualization",
-      "featured": true
+      "role": "Product Presentation, Design Development, 3D Visualization"
     },
     {
       "id": "wild-turkey-gift-box",
@@ -914,7 +920,8 @@
       ],
       "purpose": "A portable presentation kit designed for account visits, with bottle storage, tasting tools, serving pieces, and layered brand information.",
       "role": "Design Development, Structural Development, 3D Visualization",
-      "featured": true
+      "featured": true,
+      "featuredOrder": 5
     },
     {
       "id": "mortlach-ambassador-kit",
@@ -958,7 +965,10 @@
         "work/product-packaging/oban-brand-ambassador-kit/04-open-case-full-kit.png"
       ],
       "purpose": "A portable account presentation kit designed around bottle storage, tasting tools, leather case details, and brand storytelling.",
-      "role": "Design Development, Structural Development, 3D Visualization"
+      "role": "Design Development, Structural Development, 3D Visualization",
+      "featured": true,
+      "featuredImage": "work/product-packaging/oban-brand-ambassador-kit/04-open-case-full-kit.png",
+      "featuredOrder": 3
     },
     {
       "id": "revolve-porsche-scarf-kit",

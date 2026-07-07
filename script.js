@@ -119,12 +119,26 @@ if (heroImage && heroImageFrame) {
 }
 
 function getVisibleProjects() {
-  if (activeCategory === "all") return workItems.filter((project) => project.featured);
+  if (activeCategory === "all") {
+    return workItems
+      .map((project, index) => ({ project, index }))
+      .filter(({ project }) => project.featured)
+      .sort((a, b) => {
+        const aOrder = a.project.featuredOrder ?? Number.MAX_SAFE_INTEGER;
+        const bOrder = b.project.featuredOrder ?? Number.MAX_SAFE_INTEGER;
+        return aOrder - bOrder || a.index - b.index;
+      })
+      .map(({ project }) => project);
+  }
   return workItems.filter((project) => project.category === activeCategory);
 }
 
 function formatNumber(number) {
   return String(number).padStart(2, "0");
+}
+
+function getFeaturedProjectImage(project) {
+  return project.featuredImage || project.image;
 }
 
 function getProjectImages(project) {
@@ -164,10 +178,40 @@ function syncSoftFitImage(frame, image, classTarget, propertyName) {
   classTarget.style.setProperty(propertyName, cssUrl(image.currentSrc || image.src));
 }
 
+function syncLeadLayerFit(media, image) {
+  if (!media || !image || !image.naturalWidth || !image.naturalHeight) return;
+
+  const frameRect = media.getBoundingClientRect();
+  if (!frameRect.width || !frameRect.height) return;
+
+  const frameAspect = frameRect.width / frameRect.height;
+  const imageAspect = image.naturalWidth / image.naturalHeight;
+  const needsSoftFit = imageAspect < frameAspect * 0.94;
+
+  image.classList.toggle("is-soft-fit-image", needsSoftFit);
+  media.classList.toggle("is-soft-fit", needsSoftFit);
+  media.style.setProperty("--lead-soft-bg", cssUrl(image.currentSrc || image.src));
+}
+
+function syncHeroLayerFit(image) {
+  if (!heroImageFrame || !image || !image.naturalWidth || !image.naturalHeight) return;
+
+  const frameRect = heroImageFrame.getBoundingClientRect();
+  if (!frameRect.width || !frameRect.height) return;
+
+  const frameAspect = frameRect.width / frameRect.height;
+  const imageAspect = image.naturalWidth / image.naturalHeight;
+  const needsSoftFit = imageAspect < Math.min(1.45, frameAspect * 0.74);
+
+  image.classList.toggle("is-soft-fit-image", needsSoftFit);
+  heroImageFrame.classList.toggle("is-soft-fit", needsSoftFit);
+  heroImageFrame.style.setProperty("--hero-soft-bg", cssUrl(image.currentSrc || image.src));
+}
+
 function syncLeadImageFit() {
   const media = categoryGrid?.querySelector(".lead-proof-media");
   const image = media?.querySelector(".lead-image.is-active") || media?.querySelector(".lead-image");
-  syncSoftFitImage(media, image, media, "--lead-soft-bg");
+  syncLeadLayerFit(media, image);
 }
 
 function syncWorkCardImageFit(card) {
@@ -526,13 +570,13 @@ function setLeadProjectImage(projectId, imageIndex, instant = false) {
   const finish = () => {
     standbyLayer.alt = `${project.title} project media`;
     standbyLayer.removeAttribute("aria-hidden");
+    syncLeadLayerFit(media, standbyLayer);
 
     if (instant) {
       standbyLayer.classList.add("is-active");
       activeLayer.classList.remove("is-active");
       activeLayer.alt = "";
       activeLayer.setAttribute("aria-hidden", "true");
-      syncLeadImageFit();
       return;
     }
 
@@ -544,7 +588,6 @@ function setLeadProjectImage(projectId, imageIndex, instant = false) {
     window.setTimeout(() => {
       activeLayer.alt = "";
       activeLayer.setAttribute("aria-hidden", "true");
-      syncLeadImageFit();
     }, 260);
   };
 
@@ -611,7 +654,7 @@ function setHeroSlide(index, instant = false) {
 
   activeSlide = (index + slides.length) % slides.length;
   const project = slides[activeSlide];
-  const nextSrc = project.image;
+  const nextSrc = getFeaturedProjectImage(project);
   const token = (heroTransitionToken += 1);
 
   const updateCopy = () => {
@@ -648,6 +691,12 @@ function setHeroSlide(index, instant = false) {
     heroImage.src = nextSrc;
     heroImage.classList.add("is-active");
     standbyHeroImage?.classList.remove("is-active");
+    const syncCommittedImage = () => syncHeroLayerFit(heroImage);
+    if (heroImage.complete) {
+      syncCommittedImage();
+    } else {
+      heroImage.addEventListener("load", syncCommittedImage, { once: true });
+    }
     updateCopy();
   };
 
@@ -675,6 +724,7 @@ function setHeroSlide(index, instant = false) {
     if (!incomingImage.isConnected) {
       heroImageFrame?.append(incomingImage);
     }
+    syncHeroLayerFit(incomingImage);
     transitionCopy();
 
     window.requestAnimationFrame(() => {
