@@ -1,4 +1,4 @@
-const WORK_DATA_URL = "site-data/work.json";
+const WORK_DATA_URL = "site-data/work.json?v=webp-delivery1";
 
 let categories = [];
 let projects = [];
