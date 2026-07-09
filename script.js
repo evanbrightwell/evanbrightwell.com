@@ -59,6 +59,7 @@ let heroTransitionToken = 0;
 let standbyHeroImage;
 let restoringRoute = false;
 let routeAnimationTimer;
+let spatialNavAnchorFrame;
 const activeProjectByCategory = {
   environments: "don-julio-suite-room",
   displays: "ace-of-spades-fixture",
@@ -795,6 +796,65 @@ function configureSpatialNav() {
   setSpatialWaypoint(document.querySelector(".wp-contact"), "Contact", { target: "contact" });
 }
 
+function syncSpatialNavAnchor() {
+  if (!spatialNav) return;
+
+  const route = document.body.dataset.route;
+  const preservesLastCardAnchor = siteWaypointTargets.has(route);
+
+  // Bio and Contact have no card strip of their own. Keep the most recent
+  // work-grid geometry so the universal navigator does not jump on route change.
+  if (!preservesLastCardAnchor) {
+    spatialNav.style.removeProperty("--spatial-nav-top");
+    spatialNav.style.removeProperty("--spatial-nav-inline-width");
+    spatialNav.style.removeProperty("--spatial-nav-inline-height");
+    spatialNav.style.removeProperty("--spatial-nav-inline-left");
+    spatialNav.style.removeProperty("--spatial-nav-inline-right");
+  }
+
+  if (window.matchMedia("(max-width: 900px)").matches) {
+    return;
+  }
+
+  if (preservesLastCardAnchor) return;
+
+  const cardRow = route === "overview"
+    ? document.querySelector("#work-tiles")
+    : categoryIds.includes(route)
+      ? document.querySelector("#category-work-grid .project-selector-strip")
+      : null;
+
+  if (!cardRow || cardRow.hidden || getComputedStyle(cardRow).display === "none") return;
+
+  const card = cardRow.querySelector(".work-card, .project-selector-card");
+  if (!card) return;
+
+  const cardRowRect = cardRow.getBoundingClientRect();
+  const cardRect = card.getBoundingClientRect();
+  const cardRowTop = Math.round(cardRowRect.top);
+  const navGutter = 24;
+  const availableNavWidth = Math.floor(window.innerWidth - cardRowRect.right - navGutter - 18);
+
+  // Keep the XYZ plane attached to the card column, with the same 24px gutter
+  // used by the desktop grid. At narrower desktop widths, retain the existing
+  // right-anchored behavior until there is enough room to place it cleanly.
+  if (availableNavWidth < 180) return;
+
+  const navWidth = Math.round(Math.min(300, availableNavWidth, Math.max(180, cardRect.width * 1.75)));
+  const navHeight = Math.round(Math.min(190, Math.max(132, cardRowRect.height)));
+
+  spatialNav.style.setProperty("--spatial-nav-top", `${cardRowTop}px`);
+  spatialNav.style.setProperty("--spatial-nav-inline-width", `${navWidth}px`);
+  spatialNav.style.setProperty("--spatial-nav-inline-height", `${navHeight}px`);
+  spatialNav.style.setProperty("--spatial-nav-inline-left", `${Math.round(cardRowRect.right + navGutter)}px`);
+  spatialNav.style.setProperty("--spatial-nav-inline-right", "auto");
+}
+
+function scheduleSpatialNavAnchorSync() {
+  window.cancelAnimationFrame(spatialNavAnchorFrame);
+  spatialNavAnchorFrame = window.requestAnimationFrame(syncSpatialNavAnchor);
+}
+
 function markWaypoint(target) {
   const routeTarget = [...categoryIds, "bio", "contact"].includes(target) ? target : "overview";
   const activeTarget = siteWaypointTargets.has(target) ? target : "overview";
@@ -814,6 +874,8 @@ function markWaypoint(target) {
       filter.setAttribute("aria-selected", "false");
     });
   }
+
+  scheduleSpatialNavAnchorSync();
 }
 
 function playRouteIntro(target) {
@@ -929,6 +991,7 @@ function initializeSite() {
   markWaypoint("overview");
   restartCarousel();
   restoreRouteFromHash({ instant: true });
+  scheduleSpatialNavAnchorSync();
 }
 
 tiles.addEventListener("click", (event) => {
@@ -1070,6 +1133,7 @@ window.addEventListener("pointermove", (event) => {
 
 window.addEventListener("pointerleave", resetSpatialNav);
 window.addEventListener("hashchange", () => restoreRouteFromHash());
+window.addEventListener("resize", scheduleSpatialNavAnchorSync);
 
 loadWorkData()
   .then(initializeSite)
