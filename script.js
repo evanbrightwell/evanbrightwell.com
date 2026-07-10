@@ -60,6 +60,7 @@ let standbyHeroImage;
 let restoringRoute = false;
 let routeAnimationTimer;
 let spatialNavAnchorFrame;
+let projectModalTrigger;
 const activeProjectByCategory = {
   environments: "don-julio-suite-room",
   displays: "ace-of-spades-fixture",
@@ -549,10 +550,11 @@ function findProject(projectId) {
   return workItems.find((project) => project.id === projectId) || projects.find((project) => project.id === projectId);
 }
 
-function openProjectModal(projectId) {
+function openProjectModal(projectId, trigger = document.activeElement) {
   const project = findProject(projectId);
   if (!project || !projectModal) return;
 
+  projectModalTrigger = trigger;
   if (projectModalMedia) {
     projectModalMedia.innerHTML = renderProjectMedia(project, project.image, "project-modal-image", `${project.title} project media`, {
       controls: true
@@ -577,6 +579,30 @@ function closeProjectModal() {
   projectModal.querySelectorAll("video").forEach((video) => video.pause());
   projectModal.hidden = true;
   document.body.classList.remove("modal-open");
+  if (projectModalTrigger instanceof HTMLElement && projectModalTrigger.isConnected) {
+    projectModalTrigger.focus({ preventScroll: true });
+  }
+  projectModalTrigger = undefined;
+}
+
+function trapProjectModalFocus(event) {
+  if (!projectModal || projectModal.hidden || event.key !== "Tab") return;
+
+  const focusable = [...projectModal.querySelectorAll(
+    'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"]), video[controls]'
+  )].filter((element) => element instanceof HTMLElement && element.offsetParent !== null);
+
+  if (!focusable.length) return;
+
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
 }
 
 function focusCategoryLane(lane) {
@@ -1055,7 +1081,7 @@ categoryGrid?.addEventListener("click", (event) => {
 
   const card = event.target.closest("[data-project-id]");
   if (!card) return;
-  openProjectModal(card.dataset.projectId);
+  openProjectModal(card.dataset.projectId, card);
 });
 
 projectModalClose?.addEventListener("click", closeProjectModal);
@@ -1068,6 +1094,7 @@ window.addEventListener("keydown", (event) => {
   if (event.key === "Escape" && projectModal && !projectModal.hidden) {
     closeProjectModal();
   }
+  trapProjectModalFocus(event);
 });
 
 function updateSpatialNav(event) {
